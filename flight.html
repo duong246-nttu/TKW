@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Thái Tử - Tìm vé máy bay</title>
+
+    <link rel="stylesheet" href="flight.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="flight.html" class="active">Tìm vé máy bay</a>
+            <a href="train.html">Tìm vé tàu</a>
+            <a href="cruise.html">Tìm du thuyền</a>
+            <a href="about.html">Về chúng tôi</a>
+            <a href="contact.html">Liên hệ</a>
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <section class="banner">
+
+            <img src="images/flight-banner.jpg" alt="Banner">
+
+            <div class="search-box">
+
+                <div class="ticket-type">
+
+                    <label>
+                        <input type="radio" name="ticket" checked>
+                        Một chiều
+                    </label>
+
+                    <label>
+                        <input type="radio" name="ticket">
+                        Khứ hồi
+                    </label>
+
+                    <label>
+                        <input type="radio" name="ticket">
+                        Vé rẻ nhất tháng
+                    </label>
+
+                </div>
+
+                <div class="input-box">
+                    <label>Điểm đi</label>
+                    <input type="text" placeholder="Vui lòng nhập điểm đi">
+                </div>
+
+                <div class="input-box">
+                    <label>Điểm đến</label>
+                    <input type="text" placeholder="Vui lòng nhập điểm đến">
+                </div>
+
+                <div class="input-box">
+                    <label>Ngày đi</label>
+                    <input type="date">
+                </div>
+
+                <div class="input-box">
+                    <label>Ngày về</label>
+                    <input type="date">
+                </div>
+
+                <div class="passenger">
+
+                    <div class="person">
+
+                        <label>Người lớn</label>
+
+                        <div class="person-input">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="number" value="1" min="1">
+                        </div>
+
+                    </div>
+
+                    <div class="person">
+
+                        <label>Trẻ em</label>
+
+                        <div class="person-input">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="number" value="0" min="0">
+                        </div>
+
+                    </div>
+
+                    <div class="person">
+
+                        <label>Em bé</label>
+
+                        <div class="person-input">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="number" value="0" min="0">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="search-btn">
+                    <i class="fa-solid fa-plane"></i>
+                    Tìm chuyến bay
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <img src="images/logo.png" alt="Logo">
+
+            <p>
+                6 Thái Tử - Đồng hành cùng mọi chuyến đi.
+            </p>
+
+        </div>
+
+        <div class="footer-menu">
+
+            <h3>Liên kết</h3>
+
+            <a href="index.html">Trang chủ</a>
+
+            <a href="flight.html">Máy bay</a>
+
+            <a href="cruise.html">Du thuyền</a>
+
+            <a href="train.html">Vé tàu</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Liên hệ</h3>
+
+            <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
+
+            <p><i class="fa-solid fa-envelope"></i> support@6thaitu.vn</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh</p>
+
+        </div>
+
+       <div class="footer-social">
+
+    <h3>Theo dõi</h3>
+
+<div class="footer-social">
+
+    <h3>Theo dõi</h3>
+
+    <ul>
+        <li>
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+                Facebook
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-brands fa-tiktok"></i>
+                TikTok
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+                YouTube
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+    </footer>
+
+</body>
+
+</html>
