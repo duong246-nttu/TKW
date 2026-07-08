@@ -41,7 +41,7 @@
 
         <section class="banner">
 
-            <img src="images/train-banner.jpg" alt="Banner">
+            <img src="images/banner-train.png" alt="Banner">
 
             <div class="search-box">
 
@@ -137,10 +137,11 @@
 
                 </div>
 
-                <button class="search-btn">
+                <button class="search-btn" onclick="window.location.href='train-result.html'">
                     <i class="fa-solid fa-train"></i>
                     Tìm vé tàu
                 </button>
+
 
             </div>
 
@@ -202,215 +203,3 @@
     </footer>
 
 </body>
-
-</html><!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 Thái Tử - Tìm vé tàu</title>
-
-    <link rel="stylesheet" href="train.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-
-<body>
-
-    <!-- ================= HEADER ================= -->
-
-    <header>
-
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Logo">
-            </a>
-        </div>
-
-        <nav>
-
-            <a href="flight.html">Tìm vé máy bay</a>
-
-            <a href="cruise.html">Tìm du thuyền</a>
-
-            <a href="train.html" class="active">Tìm vé tàu</a>
-
-            <a href="review.html">Đánh giá</a>
-
-            <a href="contact.html">Liên hệ</a>
-
-        </nav>
-
-    </header>
-
-    <!-- ================= BODY ================= -->
-
-    <main>
-
-        <section class="banner">
-
-            <img src="images/train-banner.jpg" alt="Banner">
-
-            <div class="search-box">
-
-                <h2>Tìm vé tàu</h2>
-
-                <div class="ticket-type">
-
-                    <label>
-                        <input type="radio" name="ticket" checked>
-                        Một chiều
-                    </label>
-
-                    <label>
-                        <input type="radio" name="ticket">
-                        Khứ hồi
-                    </label>
-
-                </div>
-
-                <div class="input-box">
-                    <label>Ga đi</label>
-                    <input type="text" placeholder="Nhập ga đi">
-                </div>
-
-                <div class="input-box">
-                    <label>Ga đến</label>
-                    <input type="text" placeholder="Nhập ga đến">
-                </div>
-
-                <div class="input-box">
-                    <label>Ngày khởi hành</label>
-                    <input type="date">
-                </div>
-
-                <div class="input-box">
-                    <label>Ngày về</label>
-                    <input type="date">
-                </div>
-
-                <div class="input-box">
-                    <label>Loại ghế</label>
-
-                    <select>
-                        <option>Ghế cứng</option>
-                        <option>Ghế mềm</option>
-                        <option>Ghế mềm điều hòa</option>
-                        <option>Giường nằm khoang 4</option>
-                        <option>Giường nằm khoang 6</option>
-                    </select>
-
-                </div>
-
-                <div class="input-box">
-                    <label>Loại tàu</label>
-
-                    <select>
-                        <option>Tất cả</option>
-                        <option>SE1</option>
-                        <option>SE2</option>
-                        <option>SE3</option>
-                        <option>SE4</option>
-                        <option>SE5</option>
-                        <option>SE6</option>
-                        <option>SE7</option>
-                        <option>SE8</option>
-                    </select>
-
-                </div>
-
-                <div class="passenger">
-
-                    <div class="person">
-
-                        <label>Người lớn</label>
-
-                        <div class="person-input">
-                            <i class="fa-regular fa-user"></i>
-                            <input type="number" value="1" min="1">
-                        </div>
-
-                    </div>
-
-                    <div class="person">
-
-                        <label>Trẻ em</label>
-
-                        <div class="person-input">
-                            <i class="fa-regular fa-user"></i>
-                            <input type="number" value="0" min="0">
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <button class="search-btn">
-                    <i class="fa-solid fa-train"></i>
-                    Tìm vé tàu
-                </button>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-logo">
-
-            <img src="images/logo.png" alt="Logo">
-
-            <p>
-                6 Thái Tử - Đồng hành cùng mọi chuyến đi.
-            </p>
-
-        </div>
-
-        <div class="footer-menu">
-
-            <h3>Liên kết</h3>
-
-            <a href="index.html">Trang chủ</a>
-            <a href="flight.html">Máy bay</a>
-            <a href="cruise.html">Du thuyền</a>
-            <a href="train.html">Vé tàu</a>
-
-        </div>
-
-        <div class="footer-contact">
-
-            <h3>Liên hệ</h3>
-
-            <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
-
-            <p><i class="fa-solid fa-envelope"></i> support@6thaitu.vn</p>
-
-            <p><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh</p>
-
-        </div>
-
-        <div class="footer-social">
-
-            <h3>Theo dõi</h3>
-
-            <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a><br>
-
-            <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a><br>
-
-            <a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a><br>
-
-            <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
-
-        </div>
-
-    </footer>
-
-</body>
-
-</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lục Thái Tử</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<main>
+
+    <!-- ================= TIÊU ĐỀ ================= -->
+
+    <section class="payment-banner">
+
+        <h1>THANH TOÁN</h1>
+
+        <p>
+            Vui lòng kiểm tra lại thông tin đơn hàng trước khi xác nhận đặt vé.
+        </p>
+
+    </section>
+
+    <!-- ================= THANH TIẾN TRÌNH ================= -->
+
+    <section class="booking-step">
+
+        <div class="step completed">
+            <div class="step-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p>Chọn chuyến</p>
+        </div>
+
+        <div class="line active"></div>
+
+        <div class="step completed">
+            <div class="step-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p>Hành khách</p>
+        </div>
+
+        <div class="line active"></div>
+
+        <div class="step active">
+            <div class="step-icon">
+                <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <p>Thanh toán</p>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="step">
+            <div class="step-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p>Hoàn tất</p>
+        </div>
+
+    </section>
+
+    <!-- ================= NỘI DUNG ================= -->
+
+    <section class="payment-container">
+
+        <!-- ================= BÊN TRÁI ================= -->
+
+        <div class="payment-content">
+
+            <!-- Thông tin đơn hàng -->
+
+            <div class="payment-card">
+
+                <h2>
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Thông tin đơn hàng
+                </h2>
+
+                <div class="order-info">
+
+                    <h3>Chuyến đi</h3>
+
+                    <p><strong>Hãng:</strong> .....</p>
+
+                    <p>Điểm đi - Điểm đến</p>
+
+                    <p>00/00/0000 | 07:00 - 09:10</p>
+
+                    <hr>
+
+                    <h3>Chuyến về</h3>
+
+                    <p><strong>Hãng:</strong> .....</p>
+
+                    <p>Điểm đi - Điểm đến</p>
+
+                    <p>00/00/0000 | 17:20 - 19:35</p>
+
+                </div>
+
+            </div>
+
+            <!-- Thông tin người đặt -->
+
+            <div class="payment-card">
+
+                <h2>
+                    <i class="fa-solid fa-user"></i>
+                    Thông tin người đặt
+                </h2>
+
+                <p><strong>Họ tên:</strong> Nguyễn Văn A</p>
+
+                <p><strong>Email:</strong> nguyenvana@gmail.com</p>
+
+                <p><strong>Số điện thoại:</strong> 0912345678</p>
+
+            </div>
+
+            <!-- Phương thức thanh toán -->
+
+            <div class="payment-card">
+
+                <h2>
+                    <i class="fa-solid fa-wallet"></i>
+                    Phương thức thanh toán
+                </h2>
+
+                <div class="payment-method">
+
+                    <div class="qr-box">
+
+                        <h3>Thanh toán bằng QR</h3>
+
+                        <img src="images/qr-payment.png" alt="QR Thanh toán">
+
+                        <p>
+                            Quét mã QR bằng ứng dụng ngân hàng hoặc ví điện tử để thanh toán.
+                        </p>
+
+                    </div>
+
+                    <div class="counter-box">
+
+                        <h3>Thanh toán tại quầy</h3>
+
+                        <p>
+                            Quý khách có thể thanh toán trực tiếp tại sân bay, ga tàu hoặc quầy làm thủ tục trước giờ khởi hành.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= BÊN PHẢI ================= -->
+
+        <aside class="booking-summary">
+
+            <h2>
+                <i class="fa-solid fa-receipt"></i>
+                Tóm tắt đơn hàng
+            </h2>
+
+            <div class="summary-card">
+
+                <p>Chuyến đi</p>
+
+                <span>2.100.000đ</span>
+
+            </div>
+
+            <div class="summary-card">
+
+                <p>Chuyến về</p>
+
+                <span>1.890.000đ</span>
+
+            </div>
+
+            <div class="summary-card">
+
+                <p>Thuế & phí</p>
+
+                <span>Đã bao gồm</span>
+
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+
+                <h3>Tổng cộng</h3>
+
+                <h2>3.990.000đ</h2>
+
+            </div>
+
+            <div class="summary-btn">
+
+                <a href="passenger.html" class="back-btn">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Quay lại
+
+                </a>
+
+                <a href="success.html" class="continue-btn">
+
+                    Xác nhận đặt vé
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+
+    <footer>
+
+    <div class="footer-top">
+
+        <div class="footer-col company">
+
+            <img src="images/logo.png" alt="Logo" class="footer-logo">
+
+            <h3>Công ty TNHH Du Lịch và Dịch Vụ 6 Thái Tử</h3>
+
+            <p>
+                Tầng 99, số nhà 99, ngõ 99 phố Bùi Viện,<br>
+                phường Phạm Ngũ Lão, quận 1, TP. Hồ Chí Minh, Việt Nam
+            </p>
+
+            <p>
+                Mã số doanh nghiệp: 0110376372 do Sở Kế hoạch
+                và Đầu tư Thành phố Hồ Chí Minh cấp ngày 00/00/0000
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>GIỚI THIỆU</h4>
+
+            <a href="about.html">Về chúng tôi</a>
+            <a href="terms.html">Điều khoản và điều kiện</a>
+            <a href="privacy.html">Chính sách riêng tư</a>
+            <a href="fopayment.html">Hình thức thanh toán</a>
+
+            <p>Hotline: 09222222222</p>
+            <p>Email: info@6thaitu.com</p>
+
+        </div>
+
+        <div class="footer-col">
+
+    <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+
+    <a href="#" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+        Facebook
+    </a>
+
+    <a href="#" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+    </a>
+
+    <a href="#" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        TikTok
+    </a>
+
+    <a href="#" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+        YouTube
+    </a>
+
+    <a href="#" target="_blank">
+        <i class="fa-solid fa-comment"></i>
+        Zalo
+    </a>
+
+</div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 6 Thái Tử. All Rights Reserved.</p>
+
+        <img src="images/bocongthuong.png"
+            alt="Bộ Công Thương"
+            class="bct">
+
+    </div>
+
+</footer>
