@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lục Thái Tử</title>
+    <title>6 Thái Tử - Kết quả tìm vé tàu</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="train-result.css">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
     <header>
 
-     <div class="logo">
-    <img src="images/logo.png" alt="logo">
-    </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+        </div>
 
-       <nav>
-            <a href="index.html" class="active">Trang chủ</a>
+        <nav>
+            <a href="index.html">Trang chủ</a>
             <a href="flight.html">Tìm vé máy bay</a>
-            <a href="train.html">Tìm vé tàu</a>
+            <a href="train.html" class="active">Tìm vé tàu</a>
             <a href="cruise.html">Tìm du thuyền</a>
             <a href="about.html">Về chúng tôi</a>
             <a href="contact.html">Liên hệ</a>
@@ -31,398 +31,186 @@
 
     </header>
 
-<main>
+    <main>
 
-    <!-- ================= THÔNG TIN TÌM KIẾM ================= -->
+        <section class="result-banner">
+            <div class="trip-info">
+                <h2>Ga Hà Nội <i class="fa-solid fa-arrow-right"></i> Ga Đà Nẵng</h2>
+                <p>15/07/2026 • 20/07/2026 • 1 Người lớn • Khứ hồi</p>
+            </div>
+        </section>
 
-    <section class="result-banner">
+        <section class="booking-step">
 
-        <div class="trip-info">
-
-            <h2>
-                Ga Hà Nội
-                <i class="fa-solid fa-arrow-right"></i>
-                Ga Đà Nẵng
-            </h2>
-
-            <p>
-                15/07/2026 • 20/07/2026 •
-                1 Người lớn • Khứ hồi
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- ================= THANH TIẾN TRÌNH ================= -->
-
-    <section class="booking-step">
-
-        <div class="step active">
-
-            <div class="step-icon">
-                <i class="fa-solid fa-train"></i>
+            <div class="step active">
+                <div class="step-icon"><i class="fa-solid fa-train"></i></div>
+                <p>Chọn dịch vụ</p>
             </div>
 
-            <p>Chọn chuyến</p>
+            <div class="line "></div>
 
-        </div>
-
-        <div class="line"></div>
-
-        <div class="step">
-
-            <div class="step-icon">
-                <i class="fa-solid fa-user"></i>
+            <div class="step ">
+                <div class="step-icon"><i class="fa-solid fa-user"></i></div>
+                <p>Hành khách</p>
             </div>
 
-            <p>Hành khách</p>
+            <div class="line "></div>
 
-        </div>
-
-        <div class="line"></div>
-
-        <div class="step">
-
-            <div class="step-icon">
-                <i class="fa-solid fa-credit-card"></i>
+            <div class="step ">
+                <div class="step-icon"><i class="fa-solid fa-credit-card"></i></div>
+                <p>Thanh toán</p>
             </div>
 
-            <p>Thanh toán</p>
+            <div class="line "></div>
 
-        </div>
-
-        <div class="line"></div>
-
-        <div class="step">
-
-            <div class="step-icon">
-                <i class="fa-solid fa-circle-check"></i>
+            <div class="step ">
+                <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p>Hoàn tất</p>
             </div>
 
-            <p>Hoàn tất</p>
+        </section>
 
-        </div>
+        <section class="train-section">
 
-    </section>
+            <div class="section-title">
+                <h2>🚆 Chuyến đi</h2>
+                <p>Ga Hà Nội → Ga Đà Nẵng</p>
+                <span>15/07/2026</span>
+            </div>
 
-    <!-- ================= CHUYẾN ĐI ================= -->
+            <div class="train-list">
 
-    <section class="train-section">
-
-        <div class="section-title">
-
-            <h2>🚆 Chuyến đi</h2>
-
-            <p>Ga Hà Nội → Ga Đà Nẵng</p>
-
-            <span>15/07/2026</span>
-
-        </div>
-
-        <div class="train-list">
-
-            <div class="train-card">
-
-                <div class="train-name">
-
-                    <h3>SE5</h3>
-
-                    <span>Tàu Thống Nhất</span>
-
-                </div>
-
-                <div class="departure">
-
-                    <h2>08:30</h2>
-
-                    <span>Ga Hà Nội</span>
-
-                </div>
-
-                <div class="center">
-
-                    <p>13 giờ 40 phút</p>
-
-                    <div class="train-line">
-
-                        🚆────────────🚆
-
+                <div class="train-card">
+                    <div class="train-name"><h3>SE5</h3><span>Tàu Thống Nhất</span></div>
+                    <div class="departure"><h2>08:30</h2><span>Ga Hà Nội</span></div>
+                    <div class="center">
+                        <p>13 giờ 40 phút</p>
+                        <div class="train-line">🚆────────────🚆</div>
+                        <span>Ghế mềm điều hòa</span>
                     </div>
-
-                    <span>Ghế mềm điều hòa</span>
-
+                    <div class="arrival"><h2>22:10</h2><span>Ga Đà Nẵng</span></div>
+                    <div class="price"><span>Giá vé</span><h2>1.150.000đ</h2></div>
                 </div>
 
-                <div class="arrival">
-
-                    <h2>22:10</h2>
-
-                    <span>Ga Đà Nẵng</span>
-
-                </div>
-
-                <div class="price">
-
-                    <span>Giá vé</span>
-
-                    <h2>1.150.000đ</h2>
-
+                <div class="train-detail">
+                    <span>✔ Ghế mềm điều hòa</span>
+                    <span>✔ Có điều hòa</span>
+                    <span>✔ Bao gồm thuế & phí</span>
                 </div>
 
             </div>
 
-            <div class="train-detail">
+        </section>
 
-                <span>✔ Ghế mềm điều hòa</span>
+        <section class="train-section">
 
-                <span>✔ Có điều hòa</span>
-
-                <span>✔ Bao gồm thuế & phí</span>
-
+            <div class="section-title">
+                <h2>🚆 Chuyến về</h2>
+                <p>Ga Đà Nẵng → Ga Hà Nội</p>
+                <span>20/07/2026</span>
             </div>
 
-        </div>
+            <div class="train-list">
 
-    </section>
-
-    <!-- ================= CHUYẾN VỀ ================= -->
-
-    <section class="train-section">
-
-        <div class="section-title">
-
-            <h2>🚆 Chuyến về</h2>
-
-            <p>Ga Đà Nẵng → Ga Hà Nội</p>
-
-            <span>20/07/2026</span>
-
-        </div>
-
-        <div class="train-list">
-
-            <div class="train-card">
-
-                <div class="train-name">
-
-                    <h3>SE6</h3>
-
-                    <span>Tàu Thống Nhất</span>
-
-                </div>
-
-                <div class="departure">
-
-                    <h2>09:20</h2>
-
-                    <span>Ga Đà Nẵng</span>
-
-                </div>
-
-                <div class="center">
-
-                    <p>13 giờ 55 phút</p>
-
-                    <div class="train-line">
-
-                        🚆────────────🚆
-
+                <div class="train-card">
+                    <div class="train-name"><h3>SE6</h3><span>Tàu Thống Nhất</span></div>
+                    <div class="departure"><h2>09:20</h2><span>Ga Đà Nẵng</span></div>
+                    <div class="center">
+                        <p>13 giờ 55 phút</p>
+                        <div class="train-line">🚆────────────🚆</div>
+                        <span>Ghế mềm điều hòa</span>
                     </div>
-
-                    <span>Ghế mềm điều hòa</span>
-
+                    <div class="arrival"><h2>23:15</h2><span>Ga Hà Nội</span></div>
+                    <div class="price"><span>Giá vé</span><h2>1.180.000đ</h2></div>
                 </div>
 
-                <div class="arrival">
-
-                    <h2>23:15</h2>
-
-                    <span>Ga Hà Nội</span>
-
-                </div>
-
-                <div class="price">
-
-                    <span>Giá vé</span>
-
-                    <h2>1.180.000đ</h2>
-
+                <div class="train-detail">
+                    <span>✔ Ghế mềm điều hòa</span>
+                    <span>✔ Có điều hòa</span>
+                    <span>✔ Bao gồm thuế & phí</span>
                 </div>
 
             </div>
 
-            <div class="train-detail">
+        </section>
 
-                <span>✔ Ghế mềm điều hòa</span>
+        <section class="booking-summary">
 
-                <span>✔ Có điều hòa</span>
+            <h2><i class="fa-solid fa-receipt"></i> Tóm tắt chuyến đã chọn</h2>
 
-                <span>✔ Bao gồm thuế & phí</span>
-
+            <div class="summary-card">
+                <h3>🚆 Chuyến đi</h3>
+                <p>SE5</p>
+                <p>Ga Hà Nội → Ga Đà Nẵng</p>
+                <p>08:30 - 22:10</p>
+                <h4>1.150.000đ</h4>
             </div>
 
-        </div>
-
-    </section>
-
-    <!-- ================= TÓM TẮT ================= -->
-
-    <section class="booking-summary">
-
-        <h2>
-
-            <i class="fa-solid fa-receipt"></i>
-
-            Tóm tắt chuyến đã chọn
-
-        </h2>
-
-        <div class="summary-card">
-
-            <h3>🚆 Chuyến đi</h3>
-
-            <p>SE5</p>
-
-            <p>Ga Hà Nội → Ga Đà Nẵng</p>
-
-            <p>08:30 - 22:10</p>
-
-            <h4>1.150.000đ</h4>
-
-        </div>
-
-        <div class="summary-card">
-
-            <h3>🚆 Chuyến về</h3>
-
-            <p>SE6</p>
-
-            <p>Ga Đà Nẵng → Ga Hà Nội</p>
-
-            <p>09:20 - 23:15</p>
-
-            <h4>1.180.000đ</h4>
-
-        </div>
-
-        <div class="summary-total">
-
-            <div>
-
-                <span>1 Người lớn</span>
-
-                <strong>2.330.000đ</strong>
-
+            <div class="summary-card">
+                <h3>🚆 Chuyến về</h3>
+                <p>SE6</p>
+                <p>Ga Đà Nẵng → Ga Hà Nội</p>
+                <p>09:20 - 23:15</p>
+                <h4>1.180.000đ</h4>
             </div>
 
-        </div>
+            <div class="summary-total">
+                <div><span>1 Người lớn</span><strong>2.330.000đ</strong></div>
+            </div>
 
-        <div class="summary-btn">
+            <div class="summary-btn">
+                <a href="train.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Quay lại</a>
+                <a href="passenger.html" class="continue-btn">Tiếp tục <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
 
-            <a href="train.html" class="back-btn">
+        </section>
 
-                <i class="fa-solid fa-arrow-left"></i>
-
-                Quay lại
-
-            </a>
-
-            <a href="passenger.html" class="continue-btn">
-
-                Tiếp tục
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-    </section>
-
-      <!-- FOOTER -->
+    </main>
 
     <footer>
 
-    <div class="footer-top">
+        <div class="footer-top">
 
-        <div class="footer-col company">
+            <div class="footer-col company">
+                <img src="images/logo.png" alt="Logo" class="footer-logo">
+                <h3>Công ty TNHH Du Lịch và Dịch Vụ 6 Thái Tử</h3>
+                <p>
+                    Tầng 99, số nhà 99, ngõ 99 phố Bùi Viện,<br>
+                    phường Phạm Ngũ Lão, quận 1, TP. Hồ Chí Minh, Việt Nam
+                </p>
+                <p>
+                    Mã số doanh nghiệp: 0110376372 do Sở Kế hoạch
+                    và Đầu tư Thành phố Hồ Chí Minh cấp ngày 00/00/0000
+                </p>
+            </div>
 
-            <img src="images/logo.png" alt="Logo" class="footer-logo">
+            <div class="footer-col">
+                <h4>GIỚI THIỆU</h4>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="terms.html">Điều khoản và điều kiện</a>
+                <a href="privacy.html">Chính sách riêng tư</a>
+                <a href="fopayment.html">Hình thức thanh toán</a>
+                <p>Hotline: 09222222222</p>
+                <p>Email: info@6thaitu.com</p>
+            </div>
 
-            <h3>Công ty TNHH Du Lịch và Dịch Vụ 6 Thái Tử</h3>
-
-            <p>
-                Tầng 99, số nhà 99, ngõ 99 phố Bùi Viện,<br>
-                phường Phạm Ngũ Lão, quận 1, TP. Hồ Chí Minh, Việt Nam
-            </p>
-
-            <p>
-                Mã số doanh nghiệp: 0110376372 do Sở Kế hoạch
-                và Đầu tư Thành phố Hồ Chí Minh cấp ngày 00/00/0000
-            </p>
+            <div class="footer-col">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-comment"></i> Zalo</a>
+            </div>
 
         </div>
 
-
-        <div class="footer-col">
-
-            <h4>GIỚI THIỆU</h4>
-
-            <a href="about.html">Về chúng tôi</a>
-            <a href="terms.html">Điều khoản và điều kiện</a>
-            <a href="privacy.html">Chính sách riêng tư</a>
-            <a href="payment.html">Hình thức thanh toán</a>
-
-            <p>Hotline: 09222222222</p>
-            <p>Email: info@6thaitu.com</p>
-
+        <div class="footer-bottom">
+            <p>© 2026 6 Thái Tử. All Rights Reserved.</p>
+            <img src="images/bocongthuong.png" alt="Bộ Công Thương" class="bct">
         </div>
 
-        <div class="footer-col">
+    </footer>
 
-    <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
-
-    <a href="#" target="_blank">
-        <i class="fa-brands fa-facebook"></i>
-        Facebook
-    </a>
-
-    <a href="#" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-        Instagram
-    </a>
-
-    <a href="#" target="_blank">
-        <i class="fa-brands fa-tiktok"></i>
-        TikTok
-    </a>
-
-    <a href="#" target="_blank">
-        <i class="fa-brands fa-youtube"></i>
-        YouTube
-    </a>
-
-    <a href="#" target="_blank">
-        <i class="fa-solid fa-comment"></i>
-        Zalo
-    </a>
-
-</div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>© 2026 6 Thái Tử. All Rights Reserved.</p>
-
-        <img src="images/bocongthuong.png"
-            alt="Bộ Công Thương"
-            class="bct">
-
-    </div>
-
-</footer>
-
-</main>
+</body>
+</html>
