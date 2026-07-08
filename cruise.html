@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6 Thái Tử - Tìm du thuyền</title>
 
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="cruise.css">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
-
-    <!-- ================= HEADER ================= -->
 
     <header>
 
@@ -31,40 +27,26 @@
             <a href="cruise.html" class="active">Tìm du thuyền</a>
             <a href="about.html">Về chúng tôi</a>
             <a href="contact.html">Liên hệ</a>
-
         </nav>
 
     </header>
 
-    <!-- ================= BODY ================= -->
-
     <main>
 
         <section class="banner">
-
             <img src="images/banner-cruise.png" alt="Banner">
 
-            <div class="search-box">
+            <div class="searchcruise
 
                 <h2>Tìm du thuyền</h2>
 
                 <div class="ticket-type">
-
-                    <label>
-                        <input type="radio" name="trip" checked>
-                        Trong ngày
-                    </label>
-
-                    <label>
-                        <input type="radio" name="trip">
-                        Nghỉ đêm
-                    </label>
-
+                    <label><input type="radio" name="trip" checked> Trong ngày</label>
+                    <label><input type="radio" name="trip"> Nghỉ đêm</label>
                 </div>
 
                 <div class="input-box">
                     <label>Khu vực</label>
-
                     <select>
                         <option>Vịnh Hạ Long</option>
                         <option>Vịnh Lan Hạ</option>
@@ -83,7 +65,6 @@
 
                 <div class="input-box">
                     <label>Thời gian hành trình</label>
-
                     <select>
                         <option>1 ngày</option>
                         <option>2 ngày 1 đêm</option>
@@ -94,7 +75,6 @@
 
                 <div class="input-box">
                     <label>Loại phòng</label>
-
                     <select>
                         <option>Phòng Tiêu chuẩn</option>
                         <option>Phòng Deluxe</option>
@@ -106,7 +86,6 @@
 
                 <div class="input-box">
                     <label>Hãng du thuyền</label>
-
                     <select>
                         <option>Tất cả</option>
                         <option>Ambassador Cruise</option>
@@ -120,96 +99,79 @@
                 <div class="passenger">
 
                     <div class="person">
-
                         <label>Người lớn</label>
-
                         <div class="person-input">
                             <i class="fa-regular fa-user"></i>
                             <input type="number" value="2" min="1">
                         </div>
-
                     </div>
 
                     <div class="person">
-
                         <label>Trẻ em</label>
-
                         <div class="person-input">
                             <i class="fa-regular fa-user"></i>
                             <input type="number" value="0" min="0">
                         </div>
-
                     </div>
 
                 </div>
 
-                       <form action="cruise-result.html">
-                        <button class="search-btn">
-                            <i class="fa-solid fa-ship"></i>
-                            Tìm du thuyền
-                        </button>
+                <form action="cruise-result.html">
+                    <button type="submit" class="search-btn">
+                        <i class="fa-solid fa-ship"></i>
+                        Tìm du thuyền
+                    </button>
+                </form>
 
-                        </form>
-
-                </div>
-
+            </div>
         </section>
 
     </main>
 
-    <!-- ================= FOOTER ================= -->
-
     <footer>
 
-        <div class="footer-logo">
+        <div class="footer-top">
 
-            <img src="images/logo.png" alt="Logo">
+            <div class="footer-col company">
+                <img src="images/logo.png" alt="Logo" class="footer-logo">
+                <h3>Công ty TNHH Du Lịch và Dịch Vụ 6 Thái Tử</h3>
+                <p>
+                    Tầng 99, số nhà 99, ngõ 99 phố Bùi Viện,<br>
+                    phường Phạm Ngũ Lão, quận 1, TP. Hồ Chí Minh, Việt Nam
+                </p>
+                <p>
+                    Mã số doanh nghiệp: 0110376372 do Sở Kế hoạch
+                    và Đầu tư Thành phố Hồ Chí Minh cấp ngày 00/00/0000
+                </p>
+            </div>
 
-            <p>
-                6 Thái Tử - Đồng hành cùng mọi chuyến đi.
-            </p>
+            <div class="footer-col">
+                <h4>GIỚI THIỆU</h4>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="terms.html">Điều khoản và điều kiện</a>
+                <a href="privacy.html">Chính sách riêng tư</a>
+                <a href="fopayment.html">Hình thức thanh toán</a>
+                <p>Hotline: 09222222222</p>
+                <p>Email: info@6thaitu.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-comment"></i> Zalo</a>
+            </div>
 
         </div>
 
-        <div class="footer-menu">
-
-            <h3>Liên kết</h3>
-
-            <a href="index.html">Trang chủ</a>
-            <a href="flight.html">Máy bay</a>
-            <a href="cruise.html">Du thuyền</a>
-            <a href="train.html">Vé tàu</a>
-
-        </div>
-
-        <div class="footer-contact">
-
-            <h3>Liên hệ</h3>
-
-            <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
-
-            <p><i class="fa-solid fa-envelope"></i> support@6thaitu.vn</p>
-
-            <p><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh</p>
-
-        </div>
-
-        <div class="footer-social">
-
-            <h3>Theo dõi</h3>
-
-            <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a><br><br>
-
-            <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a><br><br>
-
-            <a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a><br><br>
-
-            <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
-
+        <div class="footer-bottom">
+            <p>© 2026 6 Thái Tử. All Rights Reserved.</p>
+            <img src="images/bocongthuong.png" alt="Bộ Công Thương" class="bct">
         </div>
 
     </footer>
 
 </body>
-
 </html>
