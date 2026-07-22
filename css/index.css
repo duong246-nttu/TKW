@@ -1,0 +1,222 @@
+/* index.css */
+
+/* Banner Section */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(to right, var(--primary-bg), #ffffff);
+    padding: 80px 24px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.banner-content {
+    flex: 0 0 60%;
+    padding-right: 40px;
+}
+
+.sub-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.banner-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--gray-900);
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.banner-content h1 span {
+    color: var(--primary);
+}
+
+.banner-content .description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.banner-image {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Review Section */
+.review {
+    padding: 80px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.review h2::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: var(--radius-sm);
+}
+
+.review-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.review-card .stars {
+    color: #FDB022;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.review-card p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.review-card h4 {
+    color: var(--gray-900);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.service {
+    text-align: center;
+    padding: 32px 24px;
+    background-color: var(--gray-50);
+    border-radius: var(--radius-lg);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-4px);
+}
+
+.service i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 20px;
+    background-color: var(--primary-bg);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    font-size: 20px;
+}
+
+.service h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+}
+
+.service p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column;
+        padding: 60px 24px;
+    }
+    .banner-content {
+        flex: 1 1 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .banner-image {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    
+    .review-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+    
+    .review-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .services {
+        grid-template-columns: 1fr;
+    }
+}

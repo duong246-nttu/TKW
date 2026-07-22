@@ -1,0 +1,141 @@
+/* contact.css */
+
+/* Contact Banner */
+.contact-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.contact-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(16, 24, 40, 0.4), rgba(16, 24, 40, 0.7));
+}
+
+.contact-banner .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.contact-banner .banner-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.contact-banner .banner-content p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 80px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.input-box label span {
+    color: #F04438; /* Using standard error red */
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--gray-900);
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+}
+
+.input-box textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(14, 79, 79, 0.1);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 12px;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-banner h1 {
+        font-size: 32px;
+    }
+    
+    .contact-form {
+        padding: 24px;
+    }
+}
