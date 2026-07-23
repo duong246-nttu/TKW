@@ -1,257 +1,200 @@
 /* about.css */
 
-/* About Banner */
 .about-banner {
-    position: relative;
-    width: 100%;
-    height: 400px;
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
 }
 
 .about-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.about-banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(16, 24, 40, 0.4), rgba(16, 24, 40, 0.7));
+.about-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-.about-banner .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #ffffff;
-    z-index: 1;
-    width: 100%;
-    padding: 0 24px;
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  padding: 0 24px;
 }
 
-.about-banner .banner-content h1 {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 16px;
+.banner-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.about-banner .banner-content p {
-    font-size: 18px;
-    opacity: 0.9;
+.banner-content p {
+  font-size: 16px;
+  opacity: 0.9;
 }
 
-/* About Us Section */
 .about-us {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 80px 24px;
-    text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
 }
 
 .about-us h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
 }
 
 .about-us h2::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: var(--primary);
-    border-radius: var(--radius-sm);
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #D4AF37; /* Gold wavy underline equivalent */
+  border-radius: var(--radius-full);
 }
 
 .about-us p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--text-secondary);
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-/* Mission Section */
-.mission {
-    padding: 80px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
+.mission, .services {
+  padding: 60px 24px;
 }
 
-.mission > h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: 48px;
+.mission-list, .service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--container-width, 1200px);
+  margin: 32px auto 0;
 }
 
-.mission-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+.mission h2, .services h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
 }
 
-.mission-list .card {
-    background-color: #ffffff;
-    box-shadow: var(--shadow-md);
-    border-radius: var(--radius-xl);
-    padding: 32px;
-    text-align: center;
-    transition: transform 0.3s ease;
+.card, .service-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.mission-list .card:hover {
-    transform: translateY(-4px);
+.card:hover, .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
 }
 
-.mission-list .card i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    background-color: var(--primary-bg);
-    color: var(--primary);
-    border-radius: var(--radius-full);
-    font-size: 24px;
-    margin-bottom: 24px;
+.card .icon, .service-card .icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-bg);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 20px;
 }
 
-.mission-list .card h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--gray-900);
-    margin-bottom: 16px;
+.card h3, .service-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
 }
 
-.mission-list .card p {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.6;
+.card p, .service-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
-/* Services List (About Page) */
 .services {
-    padding: 80px 24px;
-    background-color: var(--primary-bg);
+  background-color: var(--gray-50);
 }
 
-.services > h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: 48px;
-}
-
-.service-list {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-}
-
-.service-list .service-card {
-    background-color: #ffffff;
-    box-shadow: var(--shadow-sm);
-    border-radius: var(--radius-xl);
-    padding: 32px;
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-}
-
-.service-list .service-card:hover {
-    box-shadow: var(--shadow-md);
-}
-
-.service-list .service-card i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    background-color: var(--primary);
-    color: #ffffff;
-    border-radius: var(--radius-full);
-    font-size: 24px;
-    margin-bottom: 24px;
-}
-
-.service-list .service-card h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--gray-900);
-    margin-bottom: 16px;
-}
-
-.service-list .service-card p {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-/* Statistics Section */
 .statistics {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--primary);
-    color: #ffffff;
-    padding: 60px 24px;
-    flex-wrap: wrap;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 60px 24px;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: var(--container-width, 1200px);
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .stat {
-    text-align: center;
-    flex: 1;
-    min-width: 200px;
-    margin: 16px 0;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
 }
 
 .stat h2 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
 }
 
 .stat p {
-    font-size: 16px;
-    font-weight: 500;
-    opacity: 0.9;
+  font-size: 14px;
+  opacity: 0.9;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
-    .mission-list,
-    .service-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .about-banner {
+    height: 320px;
+  }
+  .mission-list, .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-    .about-banner h1 {
-        font-size: 32px;
-    }
-    .mission-list,
-    .service-list {
-        grid-template-columns: 1fr;
-    }
-    .statistics {
-        flex-direction: column;
-    }
-    .stat {
-        margin: 24px 0;
-    }
+  .about-banner {
+    height: 240px;
+  }
+  .about-us {
+    padding: 60px 20px;
+  }
+  .mission-list, .service-list {
+    grid-template-columns: 1fr;
+  }
+  .statistics-container {
+    flex-direction: column;
+  }
 }

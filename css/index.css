@@ -1,108 +1,222 @@
-/* index.css */
+/* =====================================================
+   INDEX.CSS — Trang chủ (theo kích thước Mixivivu)
+   ===================================================== */
 
-/* Banner Section */
+/* ── BANNER: ảnh full-width + search card nổi ── */
 .banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Search Card: nổi giữa bên dưới banner ── */
+.search-card {
+    position: relative;
+    max-width: 920px;
+    margin: -90px auto 0;
+    padding: 40px 48px 36px;
+    z-index: 10;
+
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+
+    text-align: center;
+}
+
+.search-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+}
+
+.search-card-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+}
+
+/* ── Search Inputs Row ── */
+.search-inputs {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    background: linear-gradient(to right, var(--primary-bg), #ffffff);
-    padding: 80px 24px;
-    animation: fadeIn 0.8s ease-out;
+    gap: 12px;
 }
 
-.banner-content {
-    flex: 0 0 60%;
-    padding-right: 40px;
-}
-
-.sub-title {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--primary);
-    margin-bottom: 16px;
-    letter-spacing: 1px;
-}
-
-.banner-content h1 {
-    font-size: 42px;
-    font-weight: 800;
-    color: var(--gray-900);
-    line-height: 1.2;
-    margin-bottom: 24px;
-}
-
-.banner-content h1 span {
-    color: var(--primary);
-}
-
-.banner-content .description {
-    font-size: 16px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.banner-image {
-    flex: 0 0 40%;
+.search-field {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    background: var(--white);
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.banner-image img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+.search-field:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(14, 79, 79, 0.08);
 }
 
-/* Keyframes for animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.search-field > i:first-child {
+    color: var(--gray-400);
+    font-size: 14px;
+    flex-shrink: 0;
 }
 
-/* Review Section */
+.search-field-text {
+    flex: 1.5;
+}
+
+.search-field-text input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: var(--text-dark);
+    width: 100%;
+    font-family: inherit;
+}
+
+.search-field-text input::placeholder {
+    color: var(--gray-400);
+}
+
+.search-field-select {
+    flex: 1;
+    cursor: pointer;
+}
+
+.search-field-select select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: var(--text-dark);
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.search-field-select .arrow {
+    font-size: 10px;
+    color: var(--gray-400);
+    flex-shrink: 0;
+}
+
+/* Search submit button */
+.search-submit-btn {
+    flex-shrink: 0;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.search-submit-btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+/* ── SECTION HEADER: tiêu đề trái + mô tả phải + gạch vàng ── */
+.section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: var(--container);
+    margin: 0 auto 40px;
+    padding: 0 24px;
+}
+
+.section-header .section-title {
+    flex-shrink: 0;
+}
+
+.section-header .section-title h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gray-900);
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+/* Gạch vàng trang trí dưới heading (giống mixivivu) */
+.section-header .section-title h2::after {
+    content: '';
+    display: block;
+    margin-top: 12px;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #D4A574, #E8C9A0, #D4A574, #E8C9A0, #D4A574);
+    border-radius: 4px;
+    background-size: 20px 4px;
+}
+
+.section-header .section-desc {
+    flex: 1;
+    max-width: 480px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    padding-top: 4px;
+}
+
+/* ── REVIEW SECTION ── */
 .review {
-    padding: 80px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 80px 0 60px;
 }
 
-.review h2 {
+.review > h2 {
+    /* Nếu dùng h2 trực tiếp thay vì section-header */
     text-align: center;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--gray-900);
     margin-bottom: 48px;
     position: relative;
 }
 
-.review h2::after {
+.review > h2::after {
     content: '';
-    position: absolute;
-    bottom: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
+    display: block;
+    margin: 12px auto 0;
+    width: 80px;
     height: 4px;
-    background-color: var(--primary);
-    border-radius: var(--radius-sm);
+    background: linear-gradient(90deg, #D4A574, #E8C9A0, #D4A574, #E8C9A0, #D4A574);
+    border-radius: 4px;
+    background-size: 20px 4px;
 }
 
 .review-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 24px;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .review-card {
-    background-color: #ffffff;
+    background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     padding: 28px;
@@ -116,43 +230,44 @@
 
 .review-card .stars {
     color: #FDB022;
-    margin-bottom: 16px;
-    font-size: 18px;
+    margin-bottom: 12px;
+    font-size: 16px;
 }
 
 .review-card p {
     color: var(--text-secondary);
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
 .review-card h4 {
     color: var(--gray-900);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
 }
 
-/* Services Section */
+/* ── SERVICES SECTION ── */
 .services {
     padding: 60px 24px;
-    max-width: 1200px;
+    max-width: var(--container);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .service {
     text-align: center;
-    padding: 32px 24px;
-    background-color: var(--gray-50);
+    padding: 28px 20px;
+    background: var(--gray-50);
     border-radius: var(--radius-lg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service:hover {
     transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
 .service i {
@@ -161,61 +276,312 @@
     justify-content: center;
     width: 48px;
     height: 48px;
-    margin: 0 auto 20px;
-    background-color: var(--primary-bg);
+    margin: 0 auto 16px;
+    background: var(--primary-bg);
     color: var(--primary);
     border-radius: var(--radius-full);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .service h3 {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--gray-900);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .service p {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.5;
 }
 
-/* Responsive */
+/* ── POPULAR SECTION (Product Cards giống Mixivivu) ── */
+.popular-section {
+    padding: 80px 0 40px;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+/* Heading border image (giống heading-border.png mixivivu) */
+.heading-border {
+    width: 80px;
+    height: auto;
+    margin-top: 12px;
+}
+
+/* ── Product Grid ── */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 24px;
+}
+
+/* ── Product Card ── */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ── Product Image ── */
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 216px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Badge rating (góc trái ảnh) */
+.badge-rating {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    border-radius: var(--radius-full);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-700);
+    white-space: nowrap;
+}
+
+/* ── Product Content ── */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: 16px 20px 20px;
+}
+
+.product-body {
+    margin-bottom: 16px;
+}
+
+/* Location badge */
+.badge-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 6px;
+}
+
+.badge-location i {
+    font-size: 10px;
+}
+
+/* Product name */
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-900);
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+/* Product description (ship info) */
+.product-desc {
+    font-size: 13px;
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.product-desc i {
+    color: var(--gray-400);
+    font-size: 14px;
+}
+
+/* ── Product Footer: price + button ── */
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray-100);
+}
+
+.product-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.btn-book {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary);
+    border-radius: var(--radius-md);
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.product-card:hover .btn-book {
+    background: var(--primary-hover);
+}
+
+/* ── View All Link ── */
+.view-all {
+    text-align: center;
+    padding: 40px 0 0;
+}
+
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius-full);
+    transition: all 0.25s ease;
+}
+
+.view-all-link:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.view-all-link i {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.view-all-link:hover i {
+    transform: translateX(4px);
+}
+
+/* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-    .banner {
+    .banner-bg {
+        height: 400px;
+    }
+
+    .search-card {
+        margin: -70px 24px 0;
+        padding: 32px;
+    }
+
+    .search-card-title {
+        font-size: 20px;
+    }
+
+    .search-inputs {
+        flex-wrap: wrap;
+    }
+
+    .search-field-text {
+        flex: 1 1 100%;
+    }
+
+    .search-field-select {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    .section-header {
         flex-direction: column;
-        padding: 60px 24px;
+        gap: 16px;
     }
-    .banner-content {
-        flex: 1 1 100%;
-        padding-right: 0;
-        margin-bottom: 40px;
-        text-align: center;
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .banner-image {
-        flex: 1 1 100%;
-        justify-content: center;
-    }
-    
+
     .review-list {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .services {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .banner-content h1 {
-        font-size: 32px;
+    .banner-bg {
+        height: 280px;
     }
-    
+
+    .search-card {
+        margin: -50px 16px 0;
+        padding: 24px 20px;
+    }
+
+    .search-card-title {
+        font-size: 18px;
+    }
+
+    .search-card-desc {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .search-inputs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .search-submit-btn {
+        width: 100%;
+    }
+
+    .popular-section {
+        padding: 48px 0 24px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
     .review-list {
         grid-template-columns: 1fr;
     }
-    
+
     .services {
         grid-template-columns: 1fr;
     }

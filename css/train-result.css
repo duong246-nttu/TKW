@@ -1,280 +1,269 @@
 /* train-result.css */
 
 .result-banner {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: white;
-    text-align: center;
-    padding: 48px 24px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 24px;
 }
 
 .result-banner h1 {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-.result-banner .trip-info h2 {
-    font-size: 22px;
+.trip-info h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
-.result-banner .trip-info h2 i {
-    margin: 0 8px;
-}
-
-.result-banner .trip-info p {
-    font-size: 14px;
-    opacity: 0.85;
+.result-banner p {
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 .train-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
 }
 
-.train-section .section-title {
-    margin-bottom: 20px;
+.section-title {
+  margin-bottom: 24px;
 }
 
-.train-section .section-title h2 {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--primary);
+.section-title h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
 }
 
-.train-section .section-title p {
-    font-size: 14px;
-    color: var(--text-secondary);
+.section-title p {
+  font-size: 14px;
+  color: var(--text-secondary);
 }
 
-.train-section .section-title span {
-    font-size: 13px;
-    color: var(--text-light);
+.section-title span {
+  font-size: 13px;
+  color: var(--text-light);
 }
 
-.train-list .train-card {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
-    align-items: center;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px 28px;
-    transition: all 0.3s ease;
-    margin-bottom: 16px;
-    position: relative;
-    z-index: 1;
+.train-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.train-list .train-card:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--primary);
+.train-card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.train-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 20px 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.train-card:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--primary);
 }
 
 .train-card .train-name {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+}
+
+.train-card .train-name i {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 8px;
 }
 
 .train-card .train-name h3 {
-    font-size: 14px;
-}
-
-.train-card .train-name span {
-    color: var(--text-light);
-    font-size: 12px;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 600;
+  text-align: center;
 }
 
 .train-card .departure,
 .train-card .arrival {
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
 }
 
-.train-card .departure h2,
-.train-card .arrival h2 {
-    font-size: 24px;
-    font-weight: 700;
+.train-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
 }
 
-.train-card .departure span,
-.train-card .arrival span {
-    font-size: 12px;
-    color: var(--text-light);
+.train-card span {
+  font-size: 12px;
+  color: var(--text-secondary);
 }
 
-.train-card .center {
-    text-align: center;
+.train-card .train-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  position: relative;
 }
 
-.train-card .center p {
-    font-size: 12px;
-    color: var(--text-light);
+.train-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border);
+  z-index: -1;
 }
 
-.train-card .center .train-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    color: var(--gray-300, #D0D5DD);
-    font-size: 12px;
+.train-line i {
+  color: var(--primary);
+  background: #fff;
+  padding: 0 8px;
+  font-size: 16px;
 }
 
-.train-card .center small {
-    font-size: 11px;
-    color: var(--success, #12B76A);
-    font-weight: 500;
+.train-line span {
+  margin-top: 4px;
 }
 
 .train-card .price {
-    text-align: right;
-}
-
-.train-card .price p {
-    font-size: 12px;
-    color: var(--text-light);
+  width: 20%;
+  text-align: right;
 }
 
 .train-card .price h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
 }
 
-.train-list .train-detail {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding: 12px 28px;
-    background: var(--gray-50);
-    border-radius: 0 0 16px 16px;
-    border: 1px solid var(--border);
-    border-top: 0;
-    margin-top: -16px;
-    position: relative;
-    z-index: 0;
+.train-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: var(--gray-50);
+  border-radius: 0 0 16px 16px;
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 24px 24px 10px;
+  margin-top: -16px;
+  position: relative;
+  z-index: 1;
 }
 
-.train-list .train-detail span {
-    font-size: 13px;
-    color: var(--text-secondary);
+.train-detail span {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .booking-summary {
-    max-width: 900px;
-    margin: 32px auto;
-    padding: 32px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    box-shadow: var(--shadow-sm);
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
 }
 
-.booking-summary h2 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--gray-900);
+.summary-card {
+  background-color: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 24px;
 }
 
-.booking-summary h2 i {
-    margin-right: 8px;
-    color: var(--primary);
+.summary-total {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.booking-summary .summary-card {
-    padding: 16px;
-    background: var(--gray-50);
-    border-radius: 12px;
-    margin-bottom: 12px;
+.summary-total h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
-.booking-summary .summary-card h3 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--primary);
+.summary-total h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
 }
 
-.booking-summary .summary-card p {
-    font-size: 13px;
-    color: var(--text-secondary);
-    margin-bottom: 4px;
+.continue-btn {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.booking-summary .summary-card p.price,
-.booking-summary .summary-card h4 {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--primary);
-    margin-top: 8px;
-}
-
-.booking-summary .summary-total {
-    border-top: 1px solid var(--border);
-    padding-top: 16px;
-    margin-top: 8px;
-}
-
-.booking-summary .summary-total .total-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 0;
-    font-size: 14px;
-    color: var(--text-secondary);
-}
-
-.booking-summary .summary-total .total-price strong {
-    font-size: 20px;
-    color: var(--primary);
-}
-
-.booking-summary .summary-btn {
-    display: flex;
-    gap: 16px;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-.booking-summary .continue-btn {
-    display: block;
-    text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .train-list .train-card {
-        grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 16px;
-    }
-    .train-card .train-name {
-        grid-column: span 3;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-    }
-    .train-card .price {
-        grid-column: span 3;
-        text-align: left;
-    }
+.continue-btn:hover {
+  background-color: var(--primary-light);
 }
 
 @media (max-width: 768px) {
-    .train-list .train-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .train-card .train-name,
-    .train-card .price {
-        grid-column: span 1;
-        justify-content: center;
-        text-align: center;
-    }
-    .booking-summary .summary-btn {
-        flex-direction: column;
-        justify-content: stretch;
-    }
+  .train-card {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .train-card .train-name,
+  .train-card .departure,
+  .train-card .train-line,
+  .train-card .arrival,
+  .train-card .price {
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .train-card .price {
+    text-align: left;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  .train-line::before {
+    display: none;
+  }
 }

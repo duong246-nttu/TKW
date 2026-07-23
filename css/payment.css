@@ -1,50 +1,55 @@
-/* payment.css */
+/* =====================================================
+   PAYMENT.CSS — Trang thanh toán (Mixivivu)
+   ===================================================== */
 
+/* ── Banner ── */
 .payment-banner {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     text-align: center;
-    padding: 48px 24px;
-    color: white;
+    padding: 40px 24px;
+    color: var(--white);
 }
 
 .payment-banner h1 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .payment-banner p {
     font-size: 14px;
     opacity: 0.85;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
+/* ── Layout 2 cột ── */
 .payment-container {
     display: flex;
-    gap: 32px;
+    gap: 28px;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 32px 24px;
+    padding: 28px 24px;
 }
 
 .payment-content {
     flex: 2;
 }
 
+/* ── Payment card ── */
 .payment-card {
-    background: white;
+    background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px;
-    margin-bottom: 20px;
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    margin-bottom: 16px;
     box-shadow: var(--shadow-sm);
 }
 
 .payment-card h2 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--gray-900);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -54,49 +59,55 @@
     color: var(--primary);
 }
 
+/* ── Order info ── */
 .order-info h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--primary);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .order-info p {
     font-size: 14px;
     color: var(--text-secondary);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     line-height: 1.7;
+}
+
+.order-info p strong {
+    color: var(--gray-800);
 }
 
 .order-info hr {
     border: none;
     border-top: 1px dashed var(--border);
-    margin: 16px 0;
+    margin: 14px 0;
 }
 
+/* ── Payment method ── */
 .payment-method {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
 }
 
 .qr-box {
     text-align: center;
-    padding: 24px;
+    padding: 20px;
     background: var(--gray-50);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     border: 1px solid var(--border);
 }
 
 .qr-box h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .qr-box img {
-    max-width: 200px;
-    margin: 0 auto 16px;
+    max-width: 180px;
+    margin: 0 auto 12px;
 }
 
 .qr-box p {
@@ -105,16 +116,16 @@
 }
 
 .counter-box {
-    padding: 24px;
+    padding: 20px;
     background: var(--gray-50);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     border: 1px solid var(--border);
 }
 
 .counter-box h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .counter-box p {
@@ -123,23 +134,24 @@
     line-height: 1.7;
 }
 
-/* Booking Summary Sidebar Overrides */
+/* ── Sidebar summary ── */
 .booking-summary {
     flex: 1;
     position: sticky;
-    top: calc(72px + 20px);
+    top: calc(72px + 16px);
     align-self: flex-start;
-    background: white;
+
+    background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: var(--radius-xl);
+    padding: 22px;
     box-shadow: var(--shadow-sm);
 }
 
 .booking-summary h2 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -153,17 +165,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: 10px 0;
     border-bottom: 1px solid var(--gray-100);
 }
 
 .booking-summary .summary-card p {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
 }
 
 .booking-summary .summary-card span {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--gray-900);
 }
@@ -178,7 +190,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: 10px 0;
 }
 
 .booking-summary .summary-total h3 {
@@ -188,31 +200,34 @@
 }
 
 .booking-summary .summary-total h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--primary);
-    margin: 0;
+    margin-bottom: 0;
 }
 
-.booking-summary .summary-btn {
+.summary-btn {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 8px;
+    margin-top: 16px;
 }
 
-.booking-summary .summary-btn a {
+.summary-btn a {
     text-align: center;
 }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
     .payment-container {
         flex-direction: column;
     }
-    .payment-method {
-        grid-template-columns: 1fr;
-    }
+
     .booking-summary {
         position: static;
+    }
+
+    .payment-method {
+        grid-template-columns: 1fr;
     }
 }

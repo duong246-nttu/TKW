@@ -3,49 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 Thái Tử - Trang chủ</title>
+    <title>6 Thái Tử</title>
 
     <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
     <header>
 
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Logo">
-            </a>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <nav>
+                <a href="index.html" class="active">Trang chủ</a>
+                <a href="flight.html">Tìm vé máy bay</a>
+                <a href="train.html">Tìm vé tàu</a>
+                <a href="cruise.html">Tìm du thuyền</a>
+                <a href="about.html">Về chúng tôi</a>
+            </nav>
         </div>
 
-        <nav>
-            <a href="index.html" class="active">Trang chủ</a>
-            <a href="flight.html">Tìm vé máy bay</a>
-            <a href="train.html">Tìm vé tàu</a>
-            <a href="cruise.html">Tìm du thuyền</a>
-            <a href="about.html">Về chúng tôi</a>
-            <a href="contact.html">Liên hệ</a>
-        </nav>
+        <div class="header-right">
+            <div class="hotline">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:0936363636">Hotline: 0936363636</a>
+            </div>
+            <a href="contact.html" class="header-contact-btn">Liên hệ</a>
+        </div>
 
     </header>
 
     <main>
 
+        <!-- ═══ SEARCH CARD: Tìm kiếm 3 dịch vụ ═══ -->
         <section class="banner">
+            <img src="images/banner-index.png" alt="Banner" class="banner-bg">
 
-            <div class="banner-content">
-                <p class="sub-title">✈ Khám phá thế giới - Kết nối mọi hành trình</p>
-                <h1>Đặt vé dễ dàng <br><span>Hành trình trọn vẹn</span></h1>
-                <p class="description">
-                    Đặt vé máy bay, du thuyền, tàu hỏa nhanh chóng,
-                    giá tốt cùng đội ngũ hỗ trợ tận tâm 24/7.
+            <div class="search-card">
+                <h2 class="search-card-title">Đặt vé dễ dàng — Hành trình trọn vẹn</h2>
+                <p class="search-card-desc">Đặt vé máy bay, du thuyền, tàu lửa nhanh chóng với giá tốt nhất</p>
+
+                <div class="search-inputs">
+                    <div class="search-field search-field-select">
+                        <i class="fa-solid fa-list"></i>
+                        <select>
+                            <option>Tất cả dịch vụ</option>
+                            <option>✈ Vé máy bay</option>
+                            <option>🚂 Vé tàu lửa</option>
+                            <option>🚢 Du thuyền</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </div>
+                    <div class="search-field search-field-text">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Nhập điểm đến hoặc tên dịch vụ">
+                    </div>
+                    <div class="search-field search-field-select">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <select>
+                            <option>Tất cả mức giá</option>
+                            <option>Dưới 2 triệu</option>
+                            <option>2 - 5 triệu</option>
+                            <option>Trên 5 triệu</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </div>
+                    <button type="button" class="search-submit-btn">Tìm kiếm</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ Section 1: Du thuyền phổ biến ═══ -->
+        <section class="popular-section">
+
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>Du thuyền mới <br>và phổ biến nhất</h2>
+                    <img src="images/heading-border.png" alt="" class="heading-border">
+                </div>
+                <p class="section-desc">
+                    Tận hưởng sự xa hoa và đẳng cấp tối đa trên du thuyền mới
+                    nhất và phổ biến nhất. Khám phá hành trình tuyệt vời
+                    đưa bạn vào thế giới sang trọng, tiện nghi.
                 </p>
             </div>
 
-            <div class="banner-image">
-                <img src="images/banner-index.png" alt="Banner">
+            <div class="product-grid">
+
+                <a href="cruise-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/cruise-ambassador.jpg" alt="Du thuyền Ambassador">
+                        <span class="badge-rating">⭐ 5.0 (3) đánh giá</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</span>
+                            <h3 class="product-name">Du thuyền Ambassador Hạ Long</h3>
+                            <p class="product-desc"><i class="fa-solid fa-ship"></i> Hạ thuỷ 2018 - Tàu vỏ Kim loại - 46 phòng</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">3,850,000đ / khách</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="cruise-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/cruise-grandpioneers.jpg" alt="Du thuyền Grand Pioneers">
+                        <span class="badge-rating">⭐ 5.0 (3) đánh giá</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</span>
+                            <h3 class="product-name">Du thuyền Grand Pioneers</h3>
+                            <p class="product-desc"><i class="fa-solid fa-ship"></i> Hạ thuỷ 2023 - Tàu vỏ Kim loại - 56 phòng</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">5,150,000đ / khách</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="cruise-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/cruise-scarletpearl.jpg" alt="Du thuyền Scarlet Pearl">
+                        <span class="badge-rating">⭐ 5.0 (3) đánh giá</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</span>
+                            <h3 class="product-name">Du thuyền Scarlet Pearl</h3>
+                            <p class="product-desc"><i class="fa-solid fa-ship"></i> Hạ thuỷ 2019 - Tàu vỏ Kim loại - 22 phòng</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">3,750,000đ / khách</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="view-all">
+                <a href="cruise.html" class="view-all-link">
+                    Xem tất cả Du thuyền <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ═══ Section 2: Vé máy bay phổ biến ═══ -->
+        <section class="popular-section">
+
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>Chuyến bay <br>được yêu thích nhất</h2>
+                    <img src="images/heading-border.png" alt="" class="heading-border">
+                </div>
+                <p class="section-desc">
+                    Đặt vé máy bay giá rẻ đến các điểm đến du lịch hàng đầu.
+                    Bay linh hoạt với nhiều hãng hàng không uy tín,
+                    giá vé cạnh tranh cùng dịch vụ chuyên nghiệp.
+                </p>
+            </div>
+
+            <div class="product-grid">
+
+                <a href="flight-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/flight-sgn-han.jpg" alt="TP.HCM - Hà Nội">
+                        <span class="badge-rating">✈ Phổ biến</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-plane-departure"></i> Vietnam Airlines</span>
+                            <h3 class="product-name">TP. Hồ Chí Minh → Hà Nội</h3>
+                            <p class="product-desc"><i class="fa-regular fa-clock"></i> Bay thẳng - 2h05 - Hàng ngày</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">1,290,000đ / vé</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="flight-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/flight-sgn-dli.jpg" alt="TP.HCM - Đà Lạt">
+                        <span class="badge-rating">✈ Hot deal</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-plane-departure"></i> VietJet Air</span>
+                            <h3 class="product-name">TP. Hồ Chí Minh → Đà Lạt</h3>
+                            <p class="product-desc"><i class="fa-regular fa-clock"></i> Bay thẳng - 0h55 - Hàng ngày</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">890,000đ / vé</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="flight-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/flight-han-dad.jpg" alt="Hà Nội - Đà Nẵng">
+                        <span class="badge-rating">✈ Giá tốt</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-plane-departure"></i> Bamboo Airways</span>
+                            <h3 class="product-name">Hà Nội → Đà Nẵng</h3>
+                            <p class="product-desc"><i class="fa-regular fa-clock"></i> Bay thẳng - 1h20 - Hàng ngày</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">990,000đ / vé</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="view-all">
+                <a href="flight.html" class="view-all-link">
+                    Xem tất cả Vé máy bay <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ═══ Section 3: Vé tàu lửa phổ biến ═══ -->
+        <section class="popular-section">
+
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>Tuyến tàu lửa <br>được ưa chuộng</h2>
+                    <img src="images/heading-border.png" alt="" class="heading-border">
+                </div>
+                <p class="section-desc">
+                    Trải nghiệm hành trình xuyên Việt trên những chuyến tàu
+                    lửa chất lượng cao. Ngắm cảnh thiên nhiên tuyệt đẹp
+                    với giá vé hợp lý và dịch vụ tận tâm.
+                </p>
+            </div>
+
+            <div class="product-grid">
+
+                <a href="train-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/train-sgn-nt.jpg" alt="Sài Gòn - Nha Trang">
+                        <span class="badge-rating">🚂 Phổ biến</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-train"></i> Tàu SE3 / SE7</span>
+                            <h3 class="product-name">Sài Gòn → Nha Trang</h3>
+                            <p class="product-desc"><i class="fa-regular fa-clock"></i> Giường nằm 4 điều hòa - 7h00</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">580,000đ / vé</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="train-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/train-hn-dn.jpg" alt="Hà Nội - Đà Nẵng">
+                        <span class="badge-rating">🚂 Giá tốt</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-train"></i> Tàu SE1 / SE5</span>
+                            <h3 class="product-name">Hà Nội → Đà Nẵng</h3>
+                            <p class="product-desc"><i class="fa-regular fa-clock"></i> Giường nằm 4 điều hòa - 14h30</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">750,000đ / vé</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="train-result.html" class="product-card">
+                    <div class="product-image">
+                        <img src="images/train-hn-sp.jpg" alt="Hà Nội - Sapa">
+                        <span class="badge-rating">🚂 Hot deal</span>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-body">
+                            <span class="badge-location"><i class="fa-solid fa-train"></i> Tàu SP3 / SP7</span>
+                            <h3 class="product-name">Hà Nội → Lào Cai (Sapa)</h3>
+                            <p class="product-desc"><i class="fa-regular fa-clock"></i> VIP 2 giường nằm - 8h00</p>
+                        </div>
+                        <div class="product-footer">
+                            <p class="product-price">650,000đ / vé</p>
+                            <span class="btn-book">Đặt ngay</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="view-all">
+                <a href="train.html" class="view-all-link">
+                    Xem tất cả Vé tàu lửa <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
 
         </section>
@@ -131,7 +403,7 @@
                 <a href="terms.html">Điều khoản và điều kiện</a>
                 <a href="privacy.html">Chính sách riêng tư</a>
                 <a href="fopayment.html">Hình thức thanh toán</a>
-                <p>Hotline: 09222222222</p>
+                <p>Hotline: 0936363636</p>
                 <p>Email: info@6thaitu.com</p>
             </div>
 
