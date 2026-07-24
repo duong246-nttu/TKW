@@ -1,0 +1,829 @@
+const fs = require('fs');
+
+// 1. Cruise Detail Page (Du thuyền Ambassador Hạ Long & cruise options)
+const cruiseHTML = `<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du thuyền Ambassador Hạ Long - 6 Thái Tử</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css/detail-mixivivu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <nav>
+                <a href="index.html">Trang chủ</a>
+                <a href="flight.html">Tìm vé máy bay</a>
+                <a href="train.html">Tìm vé tàu</a>
+                <a href="cruise.html" class="active">Tìm du thuyền</a>
+                <a href="about.html">Về chúng tôi</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="hotline"><i class="fa-solid fa-phone"></i><a href="tel:0936363636">Hotline: 0936363636</a></div>
+            <a href="contact.html" class="header-contact-btn">Liên hệ</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="mixi-detail-container">
+            <div class="mixi-detail-header" data-aos="fade-up">
+                <div class="mixi-detail-title-wrap">
+                    <h1>Du thuyền Ambassador Hạ Long</h1>
+                    <div class="mixi-detail-meta">
+                        <span class="mixi-detail-rating"><i class="fa-solid fa-star"></i> 5.0 (3 đánh giá)</span>
+                        <span class="mixi-detail-location"><i class="fa-solid fa-anchor"></i> Cảng tàu khách quốc tế Hạ Long, Hạ Long, Quảng Ninh <a href="#sec-intro">Xem bản đồ và lịch trình</a></span>
+                    </div>
+                    <div class="mixi-detail-dash">///////</div>
+                </div>
+                <div class="mixi-detail-price-top">
+                    <span class="price-num">3,850,000 đ</span><span class="price-unit">/ khách</span>
+                </div>
+            </div>
+
+            <div class="mixi-detail-gallery" data-aos="fade-up" data-aos-delay="100">
+                <div class="mixi-main-photo-box">
+                    <img src="images/Du thuyền Ambassador.webp" id="mixiMainGalleryImg" alt="Du thuyền Ambassador Hạ Long">
+                    <button class="mixi-gallery-nav prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="mixi-gallery-nav next"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="mixi-gallery-thumbs">
+                        <div class="mixi-thumb-item active"><img src="images/Du thuyền Ambassador.webp" alt="Ambassador"></div>
+                        <div class="mixi-thumb-item"><img src="images/Du thuyền Heritage.jpg" alt="Heritage"></div>
+                        <div class="mixi-thumb-item"><img src="images/Du thuyền Indochine.jpg" alt="Indochine"></div>
+                        <div class="mixi-thumb-item"><img src="images/Du thuyền Le Theatre.jpeg" alt="Le Theatre"></div>
+                        <div class="mixi-thumb-item"><img src="images/Du thuyền Orchid Trendy.jpg" alt="Orchid Trendy"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mixi-sticky-tabs">
+                <div class="mixi-tabs-list">
+                    <a href="#sec-features" class="mixi-tab-link active">Đặc điểm</a>
+                    <a href="#sec-pricing" class="mixi-tab-link">Phòng & giá</a>
+                    <a href="#sec-intro" class="mixi-tab-link">Giới thiệu</a>
+                    <a href="#sec-rules" class="mixi-tab-link">Quy định</a>
+                    <a href="#sec-rules" class="mixi-tab-link">Đánh giá</a>
+                </div>
+            </div>
+
+            <section id="sec-features" class="mixi-highlights-grid" data-aos="fade-up">
+                <div class="mixi-highlights-content">
+                    <h2 class="mixi-sec-title">Đặc điểm nổi bật</h2>
+                    <div class="mixi-sec-dash">///////</div>
+                    <div class="mixi-highlights-bullets">
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Du thuyền Ambassador nổi tiếng là một trong những du thuyền sang trọng và lớn nhất vịnh Hạ Long, Ambassador cũng là du thuyền duy nhất có thang máy.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Du thuyền lớn với 46 cabin trên tàu, du khách sẽ bị choáng ngợp bởi thiết kế tinh tế và hiện đại.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Chuyến nghỉ dưỡng sang chảnh với các dịch vụ như ngâm mình trong bể sục Jacuzzi lộ thiên, thư giãn massages, check in với chiếc cầu kính và thưởng thức ẩm thực Á - Âu chuẩn sao Michelin.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Du thuyền chạy trên hải trình truyền thống đưa bạn tham quan những địa điểm nổi tiếng của vịnh Hạ Long như đảo Titop và tham quan hang Sửng Sốt.</span></div>
+                    </div>
+                </div>
+
+                <aside class="mixi-info-card">
+                    <h4>Thông tin du thuyền</h4>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-anchor"></i> Hạ thủy</span><span class="val">2018</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-bed"></i> Cabin</span><span class="val">46</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-shield"></i> Thân vỏ</span><span class="val">Kim loại</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-route"></i> Hành trình</span><span class="val">Vịnh Hạ Long – Hang Sửng Sốt - Hồ Động Tiên - Đảo Titop</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-building"></i> Điều hành</span><span class="val">Công ty cổ phần thương mại và dịch vụ Sư Tử châu Á</span></div>
+                </aside>
+            </section>
+
+            <section id="sec-pricing" class="mixi-pricing-section" data-aos="fade-up">
+                <div class="mixi-pricing-top">
+                    <div>
+                        <h2 class="mixi-sec-title">Các loại phòng & giá</h2>
+                        <div class="mixi-sec-dash">///////</div>
+                    </div>
+                    <button type="button" class="mixi-clear-btn mixi-clear-rooms-btn"><i class="fa-solid fa-xmark"></i> Xoá lựa chọn</button>
+                </div>
+
+                <div class="mixi-room-list">
+                    <div class="mixi-room-item" data-price="3850000">
+                        <div class="mixi-room-left">
+                            <img src="images/Du thuyền Ambassador.webp" alt="Phòng Deluxe" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Phòng Deluxe Ambassador có ban công riêng</h3>
+                                <p><span><i class="fa-solid fa-maximize"></i> 30 m²</span> <span><i class="fa-solid fa-user"></i> Tối đa: 2 người</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">3,850,000 đ</div><div class="unit">/KHÁCH</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="4150000">
+                        <div class="mixi-room-left">
+                            <img src="images/Du thuyền Heritage.jpg" alt="Phòng Heritage Premium" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Phòng Heritage Bình Chuẩn Premium</h3>
+                                <p><span><i class="fa-solid fa-maximize"></i> 33 m²</span> <span><i class="fa-solid fa-user"></i> Tối đa: 2 người</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">4,150,000 đ</div><div class="unit">/KHÁCH</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="4125000">
+                        <div class="mixi-room-left">
+                            <img src="images/Du thuyền Indochine.jpg" alt="Phòng Indochine Executive" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Phòng Indochine Executive Suite</h3>
+                                <p><span><i class="fa-solid fa-maximize"></i> 35 m²</span> <span><i class="fa-solid fa-user"></i> Tối đa: 2 người</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">4,125,000 đ</div><div class="unit">/KHÁCH</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="3700000">
+                        <div class="mixi-room-left">
+                            <img src="images/Du thuyền Le Theatre.jpeg" alt="Phòng Le Theatre Junior" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Phòng Le Theatre Junior Suite</h3>
+                                <p><span><i class="fa-solid fa-maximize"></i> 28 m²</span> <span><i class="fa-solid fa-user"></i> Tối đa: 2 người</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">3,700,000 đ</div><div class="unit">/KHÁCH</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="4150000">
+                        <div class="mixi-room-left">
+                            <img src="images/Du thuyền Orchid Trendy.jpg" alt="Phòng Orchid Trendy Ocean" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Phòng Orchid Trendy Ocean View</h3>
+                                <p><span><i class="fa-solid fa-maximize"></i> 32 m²</span> <span><i class="fa-solid fa-user"></i> Tối đa: 2 người</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">4,150,000 đ</div><div class="unit">/KHÁCH</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mixi-pricing-bottom-bar">
+                    <div class="mixi-total-left"><span>Tổng tiền</span><h2 id="mixiTotalPriceVal">0 đ</h2></div>
+                    <div class="mixi-total-actions">
+                        <a href="contact.html" class="mixi-charter-btn">Thuê trọn tàu</a>
+                        <a href="passenger.html" class="mixi-book-now-btn">Đặt ngay <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-intro" class="mixi-intro-section" data-aos="fade-up">
+                <h2 class="mixi-sec-title">Giới thiệu</h2>
+                <div class="mixi-sec-dash">///////</div>
+                <div class="mixi-intro-content">
+                    <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px; color: #0F172A;">Giới thiệu về du thuyền Ambassador</h3>
+                    <p>Du thuyền Ambassador được thiết kế tinh tế đặc biệt với 46 cabin giống như một khách sạn sang trọng đẳng cấp giữa lòng vịnh Hạ Long chắc chắn sẽ là sự lựa chọn hoàn hảo nhất để khám phá vẻ đẹp của di sản kỳ quan thiên nhiên thế giới vịnh Hạ Long.</p>
+                    <img src="images/Du thuyền Ambassador.webp" alt="Giới thiệu du thuyền Ambassador" class="mixi-intro-image">
+                </div>
+            </section>
+
+            <section id="sec-rules" class="mixi-rules-section" data-aos="fade-up">
+                <div class="mixi-rule-box">
+                    <h3>Quy định chung và lưu ý</h3>
+                    <div class="mixi-sec-dash">///////</div>
+                    <p>Bạn có thể xem Quy định chung và lưu ý: <a href="terms.html">Tại đây ➔</a></p>
+                </div>
+                <div class="mixi-rule-box">
+                    <h3>Câu hỏi thường gặp</h3>
+                    <div class="mixi-sec-dash">///////</div>
+                    <p>Bạn có thể xem Câu hỏi thường gặp: <a href="contact.html">Tại đây ➔</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col company">
+                <img src="images/logo.png" alt="Logo" class="footer-logo">
+                <h3>Công ty TNHH Du Lịch và Dịch Vụ 6 Thái Tử</h3>
+                <p>Tầng 99, số nhà 99, ngõ 99 phố Bùi Viện,<br>phường Phạm Ngũ Lão, quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                <p>Mã số doanh nghiệp: 0110376372 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 00/00/0000</p>
+            </div>
+            <div class="footer-col">
+                <h4>GIỚI THIỆU</h4>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="terms.html">Điều khoản và điều kiện</a>
+                <a href="privacy.html">Chính sách riêng tư</a>
+                <a href="fopayment.html">Hình thức thanh toán</a>
+                <p>Hotline: 0936363636</p>
+                <p>Email: info@6thaitu.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-comment"></i> Zalo</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 6 Thái Tử. All Rights Reserved.</p>
+            <img src="images/bocongthuong.png" alt="Bộ Công Thương" class="bct">
+        </div>
+    </footer>
+
+    <div class="floating-contacts">
+        <a href="https://zalo.me/0936363636" target="_blank" class="floating-btn zalo-btn" title="Chat Zalo Tư Vấn"><i class="fa-solid fa-comment"></i></a>
+        <a href="tel:0936363636" class="floating-btn call-btn" title="Gọi Hotline 0936363636"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <button type="button" id="backToTop" class="back-to-top" title="Lên đầu trang" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item"><i class="fa-solid fa-house"></i><span>Trang chủ</span></a>
+        <a href="flight.html" class="mobile-nav-item"><i class="fa-solid fa-plane"></i><span>Vé máy bay</span></a>
+        <a href="train.html" class="mobile-nav-item"><i class="fa-solid fa-train"></i><span>Vé tàu hỏa</span></a>
+        <a href="cruise.html" class="mobile-nav-item active"><i class="fa-solid fa-ship"></i><span>Du thuyền</span></a>
+        <a href="tel:0936363636" class="mobile-nav-item call-highlight"><i class="fa-solid fa-phone"></i><span>Gọi ngay</span></a>
+    </nav>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('backToTop');
+        if (btn) {
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        }
+    });
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>`;
+
+// 2. Flight Detail Page (Chuyến bay Vietnam Airlines VN-216)
+const flightHTML = `<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyến bay Vietnam Airlines VN-216 - 6 Thái Tử</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css/detail-mixivivu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <nav>
+                <a href="index.html">Trang chủ</a>
+                <a href="flight.html" class="active">Tìm vé máy bay</a>
+                <a href="train.html">Tìm vé tàu</a>
+                <a href="cruise.html">Tìm du thuyền</a>
+                <a href="about.html">Về chúng tôi</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="hotline"><i class="fa-solid fa-phone"></i><a href="tel:0936363636">Hotline: 0936363636</a></div>
+            <a href="contact.html" class="header-contact-btn">Liên hệ</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="mixi-detail-container">
+            <div class="mixi-detail-header" data-aos="fade-up">
+                <div class="mixi-detail-title-wrap">
+                    <h1>Chuyến bay Vietnam Airlines VN-216</h1>
+                    <div class="mixi-detail-meta">
+                        <span class="mixi-detail-rating"><i class="fa-solid fa-star"></i> 4.9 (45 đánh giá)</span>
+                        <span class="mixi-detail-location"><i class="fa-solid fa-plane-departure"></i> Hà Nội (HAN) ➔ TP. Hồ Chí Minh (SGN) <a href="#sec-intro">Xem lịch trình chuyến bay</a></span>
+                    </div>
+                    <div class="mixi-detail-dash">///////</div>
+                </div>
+                <div class="mixi-detail-price-top">
+                    <span class="price-num">1,850,000 đ</span><span class="price-unit">/ vé</span>
+                </div>
+            </div>
+
+            <div class="mixi-detail-gallery" data-aos="fade-up" data-aos-delay="100">
+                <div class="mixi-main-photo-box">
+                    <img src="images/vnairline.png" id="mixiMainGalleryImg" alt="Vietnam Airlines">
+                    <button class="mixi-gallery-nav prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="mixi-gallery-nav next"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="mixi-gallery-thumbs">
+                        <div class="mixi-thumb-item active"><img src="images/vnairline.png" alt="Vietnam Airlines"></div>
+                        <div class="mixi-thumb-item"><img src="images/vietjet.png" alt="VietJet Air"></div>
+                        <div class="mixi-thumb-item"><img src="images/bamboo.png" alt="Bamboo Airways"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mixi-sticky-tabs">
+                <div class="mixi-tabs-list">
+                    <a href="#sec-features" class="mixi-tab-link active">Đặc điểm</a>
+                    <a href="#sec-pricing" class="mixi-tab-link">Hạng ghế & giá</a>
+                    <a href="#sec-intro" class="mixi-tab-link">Giới thiệu</a>
+                    <a href="#sec-rules" class="mixi-tab-link">Quy định</a>
+                    <a href="#sec-rules" class="mixi-tab-link">Đánh giá</a>
+                </div>
+            </div>
+
+            <section id="sec-features" class="mixi-highlights-grid" data-aos="fade-up">
+                <div class="mixi-highlights-content">
+                    <h2 class="mixi-sec-title">Đặc điểm nổi bật</h2>
+                    <div class="mixi-sec-dash">///////</div>
+                    <div class="mixi-highlights-bullets">
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Vietnam Airlines là hãng hàng không Quốc gia Việt Nam 4 sao uy tín hàng đầu, đường bay thẳng Hà Nội - TP.HCM chỉ 2h 10m.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Bao gồm 23kg hành lý ký gửi và 7kg hành lý xách tay miễn phí, phục vụ bữa ăn nóng chuẩn quốc tế.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Đội bay hiện đại Boeing 787 Dreamliner & Airbus A350 tạo trải nghiệm êm ái, ghế ngồi rộng rãi thoải mái.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Hỗ trợ đổi chuyến linh hoạt, phòng chờ VIP dành cho hạng Thương gia tại sân bay Nội Bài & Tân Sơn Nhất.</span></div>
+                    </div>
+                </div>
+
+                <aside class="mixi-info-card">
+                    <h4>Thông tin chuyến bay</h4>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-plane"></i> Hãng bay</span><span class="val">Vietnam Airlines</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-clock"></i> Thời gian</span><span class="val">08:00 - 10:15 (2h 15m)</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-suitcase"></i> Hành lý</span><span class="val">23kg Ký gửi + 7kg Xách tay</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-route"></i> Hành trình</span><span class="val">Hà Nội (HAN) ➔ TP.HCM (SGN)</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-building"></i> Điều hành</span><span class="val">Tổng công ty Hàng không Việt Nam</span></div>
+                </aside>
+            </section>
+
+            <section id="sec-pricing" class="mixi-pricing-section" data-aos="fade-up">
+                <div class="mixi-pricing-top">
+                    <div>
+                        <h2 class="mixi-sec-title">Các hạng vé & giá</h2>
+                        <div class="mixi-sec-dash">///////</div>
+                    </div>
+                    <button type="button" class="mixi-clear-btn mixi-clear-rooms-btn"><i class="fa-solid fa-xmark"></i> Xoá lựa chọn</button>
+                </div>
+
+                <div class="mixi-room-list">
+                    <div class="mixi-room-item" data-price="1850000">
+                        <div class="mixi-room-left">
+                            <img src="images/vnairline.png" alt="Phổ thông Tiết kiệm" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Hạng Phổ thông Tiết kiệm (Economy Classic)</h3>
+                                <p><span><i class="fa-solid fa-suitcase"></i> 23kg Ký gửi</span> <span><i class="fa-solid fa-utensils"></i> Suất ăn nhẹ</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">1,850,000 đ</div><div class="unit">/VÉ</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="2150000">
+                        <div class="mixi-room-left">
+                            <img src="images/vnairline.png" alt="Phổ thông Linh hoạt" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Hạng Phổ thông Linh hoạt (Economy Flex)</h3>
+                                <p><span><i class="fa-solid fa-suitcase"></i> 23kg Ký gửi</span> <span><i class="fa-solid fa-arrows-rotate"></i> Miễn phí đổi vé</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">2,150,000 đ</div><div class="unit">/VÉ</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="3990000">
+                        <div class="mixi-room-left">
+                            <img src="images/vnairline.png" alt="Thương gia VIP" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Hạng Thương Gia (Business Class)</h3>
+                                <p><span><i class="fa-solid fa-couch"></i> Ghế ngả 180°</span> <span><i class="fa-solid fa-gem"></i> Phòng chờ VIP</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">3,990,000 đ</div><div class="unit">/VÉ</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mixi-pricing-bottom-bar">
+                    <div class="mixi-total-left"><span>Tổng tiền</span><h2 id="mixiTotalPriceVal">0 đ</h2></div>
+                    <div class="mixi-total-actions">
+                        <a href="contact.html" class="mixi-charter-btn">Tư vấn vé đoàn</a>
+                        <a href="passenger.html" class="mixi-book-now-btn">Đặt ngay <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-intro" class="mixi-intro-section" data-aos="fade-up">
+                <h2 class="mixi-sec-title">Giới thiệu</h2>
+                <div class="mixi-sec-dash">///////</div>
+                <div class="mixi-intro-content">
+                    <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px; color: #0F172A;">Giới thiệu về chuyến bay Vietnam Airlines</h3>
+                    <p>Đồng hành cùng Vietnam Airlines - Hãng hàng không Quốc gia 4 sao trên đường bay huyết mạch Hà Nội ✈ TP. Hồ Chí Minh với dịch vụ chu đáo, tiếp viên hàng không chuyên nghiệp và máy bay hiện đại nhất Việt Nam.</p>
+                    <img src="images/vnairline.png" alt="Giới thiệu Vietnam Airlines" class="mixi-intro-image">
+                </div>
+            </section>
+
+            <section id="sec-rules" class="mixi-rules-section" data-aos="fade-up">
+                <div class="mixi-rule-box">
+                    <h3>Quy định chung và lưu ý</h3>
+                    <div class="mixi-sec-dash">///////</div>
+                    <p>Bạn có thể xem Quy định chung và lưu ý: <a href="terms.html">Tại đây ➔</a></p>
+                </div>
+                <div class="mixi-rule-box">
+                    <h3>Câu hỏi thường gặp</h3>
+                    <div class="mixi-sec-dash">///////</div>
+                    <p>Bạn có thể xem Câu hỏi thường gặp: <a href="contact.html">Tại đây ➔</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col company">
+                <img src="images/logo.png" alt="Logo" class="footer-logo">
+                <h3>Công ty TNHH Du Lịch và Dịch Vụ 6 Thái Tử</h3>
+                <p>Tầng 99, số nhà 99, ngõ 99 phố Bùi Viện,<br>phường Phạm Ngũ Lão, quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                <p>Mã số doanh nghiệp: 0110376372 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 00/00/0000</p>
+            </div>
+            <div class="footer-col">
+                <h4>GIỚI THIỆU</h4>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="terms.html">Điều khoản và điều kiện</a>
+                <a href="privacy.html">Chính sách riêng tư</a>
+                <a href="fopayment.html">Hình thức thanh toán</a>
+                <p>Hotline: 0936363636</p>
+                <p>Email: info@6thaitu.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-comment"></i> Zalo</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 6 Thái Tử. All Rights Reserved.</p>
+            <img src="images/bocongthuong.png" alt="Bộ Công Thương" class="bct">
+        </div>
+    </footer>
+
+    <div class="floating-contacts">
+        <a href="https://zalo.me/0936363636" target="_blank" class="floating-btn zalo-btn" title="Chat Zalo Tư Vấn"><i class="fa-solid fa-comment"></i></a>
+        <a href="tel:0936363636" class="floating-btn call-btn" title="Gọi Hotline 0936363636"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <button type="button" id="backToTop" class="back-to-top" title="Lên đầu trang" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item"><i class="fa-solid fa-house"></i><span>Trang chủ</span></a>
+        <a href="flight.html" class="mobile-nav-item active"><i class="fa-solid fa-plane"></i><span>Vé máy bay</span></a>
+        <a href="train.html" class="mobile-nav-item"><i class="fa-solid fa-train"></i><span>Vé tàu hỏa</span></a>
+        <a href="cruise.html" class="mobile-nav-item"><i class="fa-solid fa-ship"></i><span>Du thuyền</span></a>
+        <a href="tel:0936363636" class="mobile-nav-item call-highlight"><i class="fa-solid fa-phone"></i><span>Gọi ngay</span></a>
+    </nav>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('backToTop');
+        if (btn) {
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        }
+    });
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>`;
+
+// 3. Train Detail Page (Tàu SE5 Bắc Nam Thống Nhất)
+const trainHTML = `<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tàu SE5 Bắc Nam Thống Nhất - 6 Thái Tử</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css/detail-mixivivu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <nav>
+                <a href="index.html">Trang chủ</a>
+                <a href="flight.html">Tìm vé máy bay</a>
+                <a href="train.html" class="active">Tìm vé tàu</a>
+                <a href="cruise.html">Tìm du thuyền</a>
+                <a href="about.html">Về chúng tôi</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="hotline"><i class="fa-solid fa-phone"></i><a href="tel:0936363636">Hotline: 0936363636</a></div>
+            <a href="contact.html" class="header-contact-btn">Liên hệ</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="mixi-detail-container">
+            <div class="mixi-detail-header" data-aos="fade-up">
+                <div class="mixi-detail-title-wrap">
+                    <h1>Tàu hỏa Thống Nhất SE5 Bắc Nam</h1>
+                    <div class="mixi-detail-meta">
+                        <span class="mixi-detail-rating"><i class="fa-solid fa-star"></i> 4.9 (28 đánh giá)</span>
+                        <span class="mixi-detail-location"><i class="fa-solid fa-train"></i> Ga Hà Nội ➔ Ga Đà Nẵng ➔ Ga Sài Gòn <a href="#sec-intro">Xem hành trình tàu</a></span>
+                    </div>
+                    <div class="mixi-detail-dash">///////</div>
+                </div>
+                <div class="mixi-detail-price-top">
+                    <span class="price-num">850,000 đ</span><span class="price-unit">/ vé</span>
+                </div>
+            </div>
+
+            <div class="mixi-detail-gallery" data-aos="fade-up" data-aos-delay="100">
+                <div class="mixi-main-photo-box">
+                    <img src="images/Tàu SE5 Bắc Nam.jpg" id="mixiMainGalleryImg" alt="Tàu SE5 Bắc Nam">
+                    <button class="mixi-gallery-nav prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="mixi-gallery-nav next"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="mixi-gallery-thumbs">
+                        <div class="mixi-thumb-item active"><img src="images/Tàu SE5 Bắc Nam.jpg" alt="Tàu SE5"></div>
+                        <div class="mixi-thumb-item"><img src="images/Tàu SE7 Bắc Nam.jpg" alt="Tàu SE7"></div>
+                        <div class="mixi-thumb-item"><img src="images/Tàu SP3.jpg" alt="Tàu SP3 Sapa"></div>
+                        <div class="mixi-thumb-item"><img src="images/Tàu SPT2 Du Lịch Biển.jpg" alt="Tàu SPT2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mixi-sticky-tabs">
+                <div class="mixi-tabs-list">
+                    <a href="#sec-features" class="mixi-tab-link active">Đặc điểm</a>
+                    <a href="#sec-pricing" class="mixi-tab-link">Loại chỗ & giá</a>
+                    <a href="#sec-intro" class="mixi-tab-link">Giới thiệu</a>
+                    <a href="#sec-rules" class="mixi-tab-link">Quy định</a>
+                    <a href="#sec-rules" class="mixi-tab-link">Đánh giá</a>
+                </div>
+            </div>
+
+            <section id="sec-features" class="mixi-highlights-grid" data-aos="fade-up">
+                <div class="mixi-highlights-content">
+                    <h2 class="mixi-sec-title">Đặc điểm nổi bật</h2>
+                    <div class="mixi-sec-dash">///////</div>
+                    <div class="mixi-highlights-bullets">
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Tàu SE5 là dòng tàu Thống Nhất chất lượng cao thế hệ mới của Đường Sắt Việt Nam với động cơ vận hành êm ái.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Trang bị hệ thống điều hòa không khí hiện đại toàn bộ các toa, kính ngắm cảnh góc rộng xuyên Việt.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Đầy đủ tiện ích: ổ cắm sạc USB/220V tại từng vị trí ghế & giường nằm, phục vụ đồ ăn thức uống tận nơi.</span></div>
+                        <div class="mixi-bullet-item"><i class="fa-solid fa-check"></i><span>Nhận vé điện tử QR Code nhanh chóng qua Zalo/SMS, không cần xếp hàng đổi vé tại ga.</span></div>
+                    </div>
+                </div>
+
+                <aside class="mixi-info-card">
+                    <h4>Thông tin chuyến tàu</h4>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-train"></i> Mác tàu</span><span class="val">SE5 Thống Nhất</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-couch"></i> Toa xe</span><span class="val">12 toa chất lượng cao</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-bed"></i> Loại chỗ</span><span class="val">Khoang 4 VIP, Khoang 6 & Ghế mềm</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-route"></i> Hành trình</span><span class="val">Ga Hà Nội ➔ Ga Đà Nẵng ➔ Ga Sài Gòn</span></div>
+                    <div class="mixi-info-row"><span class="label"><i class="fa-solid fa-building"></i> Điều hành</span><span class="val">Tổng công ty Đường Sắt Việt Nam</span></div>
+                </aside>
+            </section>
+
+            <section id="sec-pricing" class="mixi-pricing-section" data-aos="fade-up">
+                <div class="mixi-pricing-top">
+                    <div>
+                        <h2 class="mixi-sec-title">Các loại chỗ & giá</h2>
+                        <div class="mixi-sec-dash">///////</div>
+                    </div>
+                    <button type="button" class="mixi-clear-btn mixi-clear-rooms-btn"><i class="fa-solid fa-xmark"></i> Xoá lựa chọn</button>
+                </div>
+
+                <div class="mixi-room-list">
+                    <div class="mixi-room-item" data-price="620000">
+                        <div class="mixi-room-left">
+                            <img src="images/Tàu SE7 Bắc Nam.jpg" alt="Ghế mềm điều hòa" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Ghế mềm điều hòa Tàu SE7</h3>
+                                <p><span><i class="fa-solid fa-couch"></i> Ghế ngả điều hòa</span> <span><i class="fa-solid fa-bolt"></i> Ổ cắm điện</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">620,000 đ</div><div class="unit">/VÉ</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="850000">
+                        <div class="mixi-room-left">
+                            <img src="images/Tàu SE5 Bắc Nam.jpg" alt="Khoang 6 giường" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Khoang 6 giường nằm điều hòa Tàu SE5</h3>
+                                <p><span><i class="fa-solid fa-bed"></i> Giường nằm êm</span> <span><i class="fa-solid fa-wind"></i> Điều hòa toàn toa</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">850,000 đ</div><div class="unit">/VÉ</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mixi-room-item" data-price="1150000">
+                        <div class="mixi-room-left">
+                            <img src="images/Tàu SP3.jpg" alt="Khoang 4 giường VIP" class="mixi-room-img">
+                            <div class="mixi-room-details">
+                                <h3>Khoang 4 giường nằm VIP Tàu SP3 Sapa</h3>
+                                <p><span><i class="fa-solid fa-star"></i> Khoang riêng 4 giường</span> <span><i class="fa-solid fa-shield"></i> Khóa cửa an toàn</span></p>
+                            </div>
+                        </div>
+                        <div class="mixi-room-right">
+                            <div class="mixi-room-price"><div class="num">1,150,000 đ</div><div class="unit">/VÉ</div></div>
+                            <div class="mixi-counter-control">
+                                <button type="button" class="mixi-counter-btn mixi-minus-btn" disabled>-</button>
+                                <span class="mixi-counter-val">0</span>
+                                <button type="button" class="mixi-counter-btn mixi-plus-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mixi-pricing-bottom-bar">
+                    <div class="mixi-total-left"><span>Tổng tiền</span><h2 id="mixiTotalPriceVal">0 đ</h2></div>
+                    <div class="mixi-total-actions">
+                        <a href="contact.html" class="mixi-charter-btn">Tư vấn vé đoàn</a>
+                        <a href="passenger.html" class="mixi-book-now-btn">Đặt ngay <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-intro" class="mixi-intro-section" data-aos="fade-up">
+                <h2 class="mixi-sec-title">Giới thiệu</h2>
+                <div class="mixi-sec-dash">///////</div>
+                <div class="mixi-intro-content">
+                    <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px; color: #0F172A;">Giới thiệu về đoàn tàu Thống Nhất SE5</h3>
+                    <p>Hành trình khám phá vẻ đẹp mảnh đất hình chữ S cùng đoàn tàu Thống Nhất SE5 - Trải nghiệm ngắm nhìn danh lam thắng cảnh Việt Nam qua khung cửa sổ thơ mộng với sự phục vụ ân cần và tiện nghi hiện đại.</p>
+                    <img src="images/Tàu SE5 Bắc Nam.jpg" alt="Giới thiệu tàu hỏa SE5" class="mixi-intro-image">
+                </div>
+            </section>
+
+            <section id="sec-rules" class="mixi-rules-section" data-aos="fade-up">
+                <div class="mixi-rule-box">
+                    <h3>Quy định chung và lưu ý</h3>
+                    <div class="mixi-sec-dash">///////</div>
+                    <p>Bạn có thể xem Quy định chung và lưu ý: <a href="terms.html">Tại đây ➔</a></p>
+                </div>
+                <div class="mixi-rule-box">
+                    <h3>Câu hỏi thường gặp</h3>
+                    <div class="mixi-sec-dash">///////</div>
+                    <p>Bạn có thể xem Câu hỏi thường gặp: <a href="contact.html">Tại đây ➔</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col company">
+                <img src="images/logo.png" alt="Logo" class="footer-logo">
+                <h3>Công ty TNHH Du Lịch và Dịch Vụ 6 Thái Tử</h3>
+                <p>Tầng 99, số nhà 99, ngõ 99 phố Bùi Viện,<br>phường Phạm Ngũ Lão, quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                <p>Mã số doanh nghiệp: 0110376372 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 00/00/0000</p>
+            </div>
+            <div class="footer-col">
+                <h4>GIỚI THIỆU</h4>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="terms.html">Điều khoản và điều kiện</a>
+                <a href="privacy.html">Chính sách riêng tư</a>
+                <a href="fopayment.html">Hình thức thanh toán</a>
+                <p>Hotline: 0936363636</p>
+                <p>Email: info@6thaitu.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="#" target="_blank"><i class="fa-solid fa-comment"></i> Zalo</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 6 Thái Tử. All Rights Reserved.</p>
+            <img src="images/bocongthuong.png" alt="Bộ Công Thương" class="bct">
+        </div>
+    </footer>
+
+    <div class="floating-contacts">
+        <a href="https://zalo.me/0936363636" target="_blank" class="floating-btn zalo-btn" title="Chat Zalo Tư Vấn"><i class="fa-solid fa-comment"></i></a>
+        <a href="tel:0936363636" class="floating-btn call-btn" title="Gọi Hotline 0936363636"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <button type="button" id="backToTop" class="back-to-top" title="Lên đầu trang" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item"><i class="fa-solid fa-house"></i><span>Trang chủ</span></a>
+        <a href="flight.html" class="mobile-nav-item"><i class="fa-solid fa-plane"></i><span>Vé máy bay</span></a>
+        <a href="train.html" class="mobile-nav-item active"><i class="fa-solid fa-train"></i><span>Vé tàu hỏa</span></a>
+        <a href="cruise.html" class="mobile-nav-item"><i class="fa-solid fa-ship"></i><span>Du thuyền</span></a>
+        <a href="tel:0936363636" class="mobile-nav-item call-highlight"><i class="fa-solid fa-phone"></i><span>Gọi ngay</span></a>
+    </nav>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('backToTop');
+        if (btn) {
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        }
+    });
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>`;
+
+fs.writeFileSync('d:/nttu.edu.vn/Thiết Kế Web/Project 6TL/website đặt vé/cruise-result.html', cruiseHTML, 'utf8');
+fs.writeFileSync('d:/nttu.edu.vn/Thiết Kế Web/Project 6TL/website đặt vé/flight-result.html', flightHTML, 'utf8');
+fs.writeFileSync('d:/nttu.edu.vn/Thiết Kế Web/Project 6TL/website đặt vé/train-result.html', trainHTML, 'utf8');
+
+console.log('Successfully updated all detail result pages with exact vehicle images!');
