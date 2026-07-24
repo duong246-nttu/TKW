@@ -625,3 +625,284 @@ footer {
     background: var(--gray-50);
     border-color: var(--gray-300);
 }
+
+/* =====================================================
+   FLOATING WIDGETS & MOBILE STICKY BOTTOM NAV
+   ===================================================== */
+
+/* ── Floating Contact Buttons (Zalo + Hotline) ── */
+.floating-contacts {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+}
+
+.floating-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.floating-btn.zalo-btn {
+    background: #0088FF;
+}
+
+.floating-btn.call-btn {
+    background: #12B76A;
+    animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        box-shadow: 0 0 0 0 rgba(18, 183, 106, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(18, 183, 106, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(18, 183, 106, 0);
+    }
+}
+
+/* ── Back to Top Button ── */
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--gray-700);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9990;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ── Mobile Sticky Bottom Bar (Dành cho Điện thoại <= 768px) ── */
+.mobile-bottom-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .floating-contacts {
+        bottom: 80px;
+        right: 16px;
+    }
+
+    .back-to-top {
+        bottom: 80px;
+        left: 16px;
+    }
+
+    body {
+        padding-bottom: 68px; /* Khoảng trống cho bottom nav */
+    }
+
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: #ffffff;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 4px 8px;
+    }
+
+    .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        text-decoration: none;
+        color: var(--gray-500);
+        font-size: 11px;
+        font-weight: 500;
+        flex: 1;
+        transition: color 0.2s;
+    }
+
+    .mobile-nav-item i {
+        font-size: 18px;
+    }
+
+    .mobile-nav-item.active,
+    .mobile-nav-item:hover {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .mobile-nav-item.call-highlight {
+        color: #12B76A;
+        font-weight: 700;
+    }
+}
+
+/* =====================================================
+   LUXURY ANIMATIONS & VISUAL EFFECTS
+   ===================================================== */
+
+/* ── Glassmorphism Header ── */
+header {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Scroll Reveal Effects ── */
+.reveal-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Button Shine Light Flare ── */
+.btn-book, 
+.search-submit-btn, 
+.header-contact-btn, 
+.continue-btn, 
+.search-btn,
+.btn-destination-view {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-book::after, 
+.search-submit-btn::after, 
+.header-contact-btn::after, 
+.continue-btn::after, 
+.search-btn::after,
+.btn-destination-view::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.45) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.btn-book:hover::after, 
+.search-submit-btn:hover::after, 
+.header-contact-btn:hover::after, 
+.continue-btn:hover::after, 
+.search-btn:hover::after,
+.btn-destination-view:hover::after {
+    left: 140%;
+}
+
+.btn-book:active,
+.search-submit-btn:active,
+.header-contact-btn:active,
+.continue-btn:active,
+.search-btn:active {
+    transform: scale(0.97) !important;
+}
+
+/* ── Luxury Ripple Animation ── */
+span.luxury-ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-anim 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+@keyframes ripple-anim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ── Lenis Smooth Scroll Rules ── */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* ── Guaranteed Visibility Safety Fallback ── */
+[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+body.aos-enabled [data-aos].aos-animate {
+    opacity: 1 !important;
+}

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -144,20 +144,28 @@
                 <h2><i class="fa-solid fa-receipt"></i> Tóm tắt đơn hàng</h2>
 
                 <div class="summary-card">
-                    <h3><i class="fa-solid fa-plane-departure"></i> Chuyến đi</h3>
-                    <p><strong>Hãng:</strong> .....</p>
-                    <p>Điểm đi - Điểm đến</p>
-                    <p>00/00/0000</p>
-                    <p>07:00 - 09:10</p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <img src="images/vnairline.png" alt="Vietnam Airlines" style="height: 32px; object-fit: contain;">
+                        <div>
+                            <h3 style="margin:0; font-size:14px;"><i class="fa-solid fa-plane-departure"></i> Chuyến đi (Vietnam Airlines)</h3>
+                            <small style="color: var(--gray-500);">Hà Nội (HAN) → TP.HCM (SGN)</small>
+                        </div>
+                    </div>
+                    <p><strong>Số hiệu:</strong> VN215 (Chặng bay thẳng)</p>
+                    <p><strong>Khởi hành:</strong> 25/07/2026 | 07:00 - 09:10</p>
                     <h4>2.100.000đ</h4>
                 </div>
 
                 <div class="summary-card">
-                    <h3><i class="fa-solid fa-plane-arrival"></i> Chuyến về</h3>
-                    <p><strong>Hãng:</strong> .....</p>
-                    <p>Điểm đi - Điểm đến</p>
-                    <p>00/00/0000</p>
-                    <p>17:20 - 19:35</p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <img src="images/vietjet.png" alt="VietJet Air" style="height: 32px; object-fit: contain;">
+                        <div>
+                            <h3 style="margin:0; font-size:14px;"><i class="fa-solid fa-plane-arrival"></i> Chuyến về (VietJet Air)</h3>
+                            <small style="color: var(--gray-500);">TP.HCM (SGN) → Hà Nội (HAN)</small>
+                        </div>
+                    </div>
+                    <p><strong>Số hiệu:</strong> VJ152 (Chặng bay thẳng)</p>
+                    <p><strong>Khởi hành:</strong> 28/07/2026 | 17:20 - 19:35</p>
                     <h4>1.890.000đ</h4>
                 </div>
 
@@ -223,5 +231,6 @@
 
     </footer>
 
+    <script src="js/main.js" defer></script>
 </body>
 </html>

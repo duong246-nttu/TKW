@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -85,15 +85,19 @@
                     <h2><i class="fa-solid fa-file-invoice"></i> Thông tin đơn hàng</h2>
 
                     <div class="order-info">
-                        <h3>Chuyến đi</h3>
-                        <p><strong>Hãng:</strong> .....</p>
-                        <p>Điểm đi - Điểm đến</p>
-                        <p>00/00/0000 | 07:00 - 09:10</p>
-                        <hr>
-                        <h3>Chuyến về</h3>
-                        <p><strong>Hãng:</strong> .....</p>
-                        <p>Điểm đi - Điểm đến</p>
-                        <p>00/00/0000 | 17:20 - 19:35</p>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <img src="images/vnairline.png" alt="Vietnam Airlines" style="height: 28px; object-fit: contain;">
+                            <h3 style="margin: 0; font-size: 14px;">Chuyến đi: Hà Nội → TP.HCM</h3>
+                        </div>
+                        <p><strong>Hãng:</strong> Vietnam Airlines (VN215)</p>
+                        <p>25/07/2026 | 07:00 - 09:10</p>
+                        <hr style="margin: 12px 0; border: none; border-top: 1px solid var(--border);">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <img src="images/vietjet.png" alt="VietJet Air" style="height: 28px; object-fit: contain;">
+                            <h3 style="margin: 0; font-size: 14px;">Chuyến về: TP.HCM → Hà Nội</h3>
+                        </div>
+                        <p><strong>Hãng:</strong> VietJet Air (VJ152)</p>
+                        <p>28/07/2026 | 17:20 - 19:35</p>
                     </div>
                 </div>
 
@@ -193,5 +197,6 @@
 
     </footer>
 
+    <script src="js/main.js" defer></script>
 </body>
 </html>

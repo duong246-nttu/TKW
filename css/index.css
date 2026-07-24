@@ -963,3 +963,36 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 480px) {
+    .partner-tabs {
+        gap: 6px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .partner-tab {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    
+    .partner-card {
+        padding: 18px 14px 16px;
+    }
+    
+    .partner-card-logo {
+        height: 58px;
+    }
+    
+    .partner-card-logo img {
+        max-height: 42px;
+    }
+    
+    .partner-card-name {
+        font-size: 14px;
+    }
+    
+    .partner-card-sub {
+        font-size: 11px;
+    }
+}

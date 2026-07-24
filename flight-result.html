@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -106,7 +106,7 @@
                 <div class="flight-card">
 
                     <div class="airline">
-                        <img src="images/vietnam-airlines.png" alt="Vietnam Airlines">
+                        <img src="images/vnairline.png" alt="Vietnam Airlines">
                         <div><h3>Vietnam Airlines</h3><small>VN231</small></div>
                     </div>
 
@@ -261,5 +261,60 @@
 
     </footer>
 
+    <!-- ═══ FLOATING CONTACT WIDGETS ═══ -->
+    <div class="floating-contacts">
+        <a href="https://zalo.me/0936363636" target="_blank" class="floating-btn zalo-btn" title="Chat Zalo Tư Vấn">
+            <i class="fa-solid fa-comment"></i>
+        </a>
+        <a href="tel:0936363636" class="floating-btn call-btn" title="Gọi Hotline 0936363636">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- ═══ BACK TO TOP BUTTON ═══ -->
+    <button type="button" id="backToTop" class="back-to-top" title="Lên đầu trang" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ═══ MOBILE STICKY BOTTOM NAV ═══ -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Trang chủ</span>
+        </a>
+        <a href="flight.html" class="mobile-nav-item active">
+            <i class="fa-solid fa-plane"></i>
+            <span>Vé máy bay</span>
+        </a>
+        <a href="train.html" class="mobile-nav-item">
+            <i class="fa-solid fa-train"></i>
+            <span>Vé tàu hỏa</span>
+        </a>
+        <a href="cruise.html" class="mobile-nav-item">
+            <i class="fa-solid fa-ship"></i>
+            <span>Du thuyền</span>
+        </a>
+        <a href="tel:0936363636" class="mobile-nav-item call-highlight">
+            <i class="fa-solid fa-phone"></i>
+            <span>Gọi ngay</span>
+        </a>
+    </nav>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('backToTop');
+        if (btn) {
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        }
+    });
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
