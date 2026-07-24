@@ -483,6 +483,338 @@
     transform: translateX(4px);
 }
 
+/* ── TESTIMONIAL SECTION (Đánh giá từ khách hàng - Mixivivu style) ── */
+.testimonial-section {
+    padding: 80px 0 70px;
+    background: #f4faf9;
+    position: relative;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.testimonial-container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.testimonial-card {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 12px;
+}
+
+.quote-icon {
+    font-size: 36px;
+    color: #46c7c7;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.testimonial-content {
+    flex: 1;
+    max-width: 800px;
+}
+
+.testimonial-service {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 14px;
+    transition: opacity 0.15s ease;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 24px;
+    transition: opacity 0.15s ease;
+}
+
+.testimonial-author {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--gray-900);
+    text-transform: uppercase;
+    transition: opacity 0.15s ease;
+}
+
+/* ── Testimonial Pills (Danh sách người đánh giá) ── */
+.testimonial-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-left: 12px;
+}
+
+.pill-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-700);
+    background: #eef6f5;
+    border: 1.5px solid transparent;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.pill-btn:hover {
+    background: #e0f2f0;
+}
+
+.pill-btn.active {
+    background: transparent;
+    border-color: var(--gray-900);
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+/* =====================================================
+   DESTINATIONS SECTION (Các điểm đến của 6 Thái Tử)
+   ===================================================== */
+.destinations-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.destinations-container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.destinations-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 48px;
+}
+
+.destinations-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 10px;
+}
+
+.destinations-header .section-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.heading-border.centered {
+    display: block;
+    margin: 12px auto 0;
+}
+
+/* ── Grid điểm đến ── */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.destination-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.destination-img {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.destination-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover .destination-img img {
+    transform: scale(1.06);
+}
+
+.destination-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 14px;
+}
+
+.btn-destination-view {
+    display: inline-block;
+    padding: 6px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-700);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    background: var(--white);
+    transition: all 0.2s ease;
+}
+
+.btn-destination-view:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* =====================================================
+   PARTNERS SECTION (Đối tác Cùng Các Hãng Dịch Vụ Lớn)
+   ===================================================== */
+.partners-section {
+    padding: 80px 0;
+    background: #f4faf9;
+    border-top: 1px solid var(--border);
+}
+
+.partners-container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ── Filter Tabs ── */
+.partner-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 36px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.partner-tab {
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.partner-tab:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-bg);
+}
+
+.partner-tab.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 4px 14px rgba(14, 79, 79, 0.25);
+}
+
+/* ── Luxury Partner Cards Grid ── */
+.partners-luxury-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.partner-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 24px 20px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(14, 79, 79, 0.12);
+    border-color: var(--primary);
+}
+
+.partner-cat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--primary-bg);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: 16px;
+}
+
+.partner-card-logo {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    padding: 8px 16px;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+}
+
+.partner-card-logo img {
+    max-width: 100%;
+    max-height: 52px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-card-logo img {
+    transform: scale(1.08);
+}
+
+.partner-card-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.partner-card-sub {
+    font-size: 12px;
+    color: var(--gray-500);
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
     .banner-bg {
@@ -516,6 +848,14 @@
     }
 
     .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners-luxury-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -574,8 +914,49 @@
         height: 200px;
     }
 
-    .review-list {
+    .destinations-section,
+    .partners-section,
+    .testimonial-section {
+        padding: 48px 0;
+    }
+
+    .destinations-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .partners-luxury-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .testimonial-card {
+        gap: 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-left: 0;
+    }
+
+    .quote-icon {
+        font-size: 28px;
+    }
+
+    .testimonial-service {
+        font-size: 17px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+
+    .testimonial-pills {
+        padding-left: 0;
+        gap: 8px;
+    }
+
+    .pill-btn {
+        padding: 6px 14px;
+        font-size: 13px;
     }
 
     .services {

@@ -323,60 +323,214 @@
 
         </section>
 
-        <section class="review">
+        <!-- ═══ TESTIMONIAL SECTION (Đánh giá từ những người đã trải nghiệm - Phong cách Mixivivu) ═══ -->
+        <section class="testimonial-section">
 
-            <h2>Đánh giá của khách hàng</h2>
+            <div class="testimonial-container">
 
-            <div class="review-list">
-
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Đặt vé rất nhanh, giao diện dễ sử dụng. Giá vé cũng khá rẻ so với nhiều nơi khác."</p>
-                    <h4>Nguyễn Văn A</h4>
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>Đánh giá từ những<br>người đã trải nghiệm</h2>
+                        <img src="images/heading-border.png" alt="" class="heading-border">
+                    </div>
+                    <p class="section-desc">
+                        Khách hàng chia sẻ về những kỷ niệm tuyệt vời trên chuyến du lịch với chúng tôi.
+                    </p>
                 </div>
 
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Tôi rất hài lòng với dịch vụ. Nhân viên hỗ trợ cực kỳ nhiệt tình."</p>
-                    <h4>Trần Thị B</h4>
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <h3 class="testimonial-service" id="review-service">Du thuyền Heritage Bình Chuẩn</h3>
+                        <p class="testimonial-text" id="review-text">
+                            Chị rất cảm ơn team đã tư vấn cho chị chọn du thuyền Heritage Bình Chuẩn. Bố mẹ chị rất ưng ý em ạ! Tàu đẹp, mang đậm phong cách Á Đông. Đồ ăn hợp khẩu vị. Các bạn nhân viên trên tàu nhiệt tình và chu đáo.
+                        </p>
+                        <p class="testimonial-author" id="review-author">CHỊ THU HÀ -</p>
+                    </div>
                 </div>
 
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Thanh toán nhanh chóng, nhận vé chỉ sau vài phút. Sẽ tiếp tục sử dụng."</p>
-                    <h4>Lê Minh C</h4>
+                <div class="testimonial-pills">
+                    <button type="button" class="pill-btn active" onclick="selectReview(0, this)">Chị Thu Hà</button>
+                    <button type="button" class="pill-btn" onclick="selectReview(1, this)">Anh Khánh</button>
+                    <button type="button" class="pill-btn" onclick="selectReview(2, this)">Chị Linh - Anh Dũng</button>
+                    <button type="button" class="pill-btn" onclick="selectReview(3, this)">Bạn Minh Hoàng</button>
+                    <button type="button" class="pill-btn" onclick="selectReview(4, this)">Cô Thanh Hằng và bạn</button>
                 </div>
 
             </div>
 
         </section>
 
-        <section class="services">
+        <!-- ═══ SECTION: Các điểm đến của 6 Thái Tử ═══ -->
+        <section class="destinations-section">
+            <div class="destinations-container">
 
-            <div class="service">
-                <i class="fa-solid fa-wallet"></i>
-                <h3>Giá tốt mỗi ngày</h3>
-                <p>Cam kết giá cạnh tranh và nhiều ưu đãi.</p>
+                <div class="destinations-header">
+                    <h2>Các điểm đến của 6 Thái Tử</h2>
+                    <p class="section-desc">Khám phá vẻ đẹp tuyệt vời từ Vịnh Hạ Long, Hà Nội, Đà Nẵng đến Nha Trang: Hành trình đến thiên đường du lịch</p>
+                    <img src="images/heading-border.png" alt="" class="heading-border centered">
+                </div>
+
+                <div class="destinations-grid">
+
+                    <!-- Điểm đến 1: Vịnh Hạ Long -->
+                    <div class="destination-card">
+                        <div class="destination-img">
+                            <img src="images/vinhhalong.png" alt="Vịnh Hạ Long">
+                        </div>
+                        <h3 class="destination-title">Vịnh Hạ Long</h3>
+                        <a href="cruise.html" class="btn-destination-view">Xem ngay</a>
+                    </div>
+
+                    <!-- Điểm đến 2: Vịnh Lan Hạ -->
+                    <div class="destination-card">
+                        <div class="destination-img">
+                            <img src="images/vinhlanha.jpg" alt="Vịnh Lan Hạ">
+                        </div>
+                        <h3 class="destination-title">Vịnh Lan Hạ</h3>
+                        <a href="cruise.html" class="btn-destination-view">Xem ngay</a>
+                    </div>
+
+                    <!-- Điểm đến 3: Hà Nội - Sapa -->
+                    <div class="destination-card">
+                        <div class="destination-img">
+                            <img src="images/hanoi.jpg" alt="Hà Nội - Sapa">
+                        </div>
+                        <h3 class="destination-title">Hà Nội - Sapa</h3>
+                        <a href="train.html" class="btn-destination-view">Xem ngay</a>
+                    </div>
+
+                    <!-- Điểm đến 4: Đà Nẵng - Nha Trang -->
+                    <div class="destination-card">
+                        <div class="destination-img">
+                            <img src="images/danang.jpg" alt="Đà Nẵng - Nha Trang">
+                        </div>
+                        <h3 class="destination-title">Đà Nẵng - Nha Trang</h3>
+                        <a href="flight.html" class="btn-destination-view">Xem ngay</a>
+                    </div>
+
+                </div>
+
             </div>
+        </section>
 
-            <div class="service">
-                <i class="fa-solid fa-headset"></i>
-                <h3>Hỗ trợ 24/7</h3>
-                <p>Luôn sẵn sàng hỗ trợ mọi lúc mọi nơi.</p>
+        <!-- ═══ SECTION: Đối tác Cùng các Hãng Máy Bay, Tàu Hỏa & Du Thuyền Lớn ═══ -->
+        <!-- ═══ SECTION: Đối tác Cùng các Hãng Dịch Vụ Lớn (Thiết kế đẹp mắt & Sang trọng) ═══ -->
+        <section class="partners-section">
+            <div class="partners-container">
+
+                <div class="destinations-header">
+                    <h2>Đối Tác Chiến Lược Các Hãng Dịch Vụ Lớn</h2>
+                    <p class="section-desc">Hợp tác trực tiếp cùng các Hãng Hàng Không, Đường Sắt Việt Nam & Tập Đoàn Du Thuyền 5★ danh tiếng mang đến ưu đãi độc quyền dành riêng cho bạn.</p>
+                    <img src="images/heading-border.png" alt="" class="heading-border centered">
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="partner-tabs">
+                    <button type="button" class="partner-tab active" onclick="filterPartners('all', this)">⭐ Tất cả đối tác</button>
+                    <button type="button" class="partner-tab" onclick="filterPartners('air', this)"><i class="fa-solid fa-plane"></i> Hàng không</button>
+                    <button type="button" class="partner-tab" onclick="filterPartners('train', this)"><i class="fa-solid fa-train"></i> Đường sắt</button>
+                    <button type="button" class="partner-tab" onclick="filterPartners('cruise', this)"><i class="fa-solid fa-ship"></i> Du thuyền 5★</button>
+                </div>
+
+                <!-- Luxury Partner Cards Grid -->
+                <div class="partners-luxury-grid">
+
+                    <!-- Vietnam Airlines -->
+                    <div class="partner-card" data-category="air">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-plane"></i> Hàng không</span>
+                        <div class="partner-card-logo">
+                            <img src="images/logo-vietnamairlines.jpg" alt="Vietnam Airlines">
+                        </div>
+                        <h4 class="partner-card-name">Vietnam Airlines</h4>
+                        <p class="partner-card-sub">Hãng Hàng Không Quốc Gia</p>
+                    </div>
+
+                    <!-- VietJet Air -->
+                    <div class="partner-card" data-category="air">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-plane"></i> Hàng không</span>
+                        <div class="partner-card-logo">
+                            <img src="images/Logo-VietjetAir.jpg" alt="VietJet Air">
+                        </div>
+                        <h4 class="partner-card-name">VietJet Air</h4>
+                        <p class="partner-card-sub">Bay Là Thích Ngay</p>
+                    </div>
+
+                    <!-- Bamboo Airways -->
+                    <div class="partner-card" data-category="air">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-plane"></i> Hàng không</span>
+                        <div class="partner-card-logo">
+                            <img src="images/logo-bambooairways.png" alt="Bamboo Airways">
+                        </div>
+                        <h4 class="partner-card-name">Bamboo Airways</h4>
+                        <p class="partner-card-sub">Hơn Cả Một Chuyến Bay</p>
+                    </div>
+
+                    <!-- Đường Sắt Bắc Nam -->
+                    <div class="partner-card" data-category="train">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-train"></i> Đường sắt</span>
+                        <div class="partner-card-logo">
+                            <img src="images/logo-duongsatbacnam.webp" alt="Đường Sắt Bắc Nam">
+                        </div>
+                        <h4 class="partner-card-name">Đường Sắt Bắc Nam</h4>
+                        <p class="partner-card-sub">Tổng Công Ty ĐSVN</p>
+                    </div>
+
+                    <!-- Tàu SP Sapa -->
+                    <div class="partner-card" data-category="train">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-train"></i> Đường sắt</span>
+                        <div class="partner-card-logo">
+                            <img src="images/Logo_Spsapa.webp" alt="Tàu SP Sapa">
+                        </div>
+                        <h4 class="partner-card-name">Tàu Du Lịch SP Sapa</h4>
+                        <p class="partner-card-sub">Hành Trình Mây Ngàn</p>
+                    </div>
+
+                    <!-- Tàu 5★ SE3/SE7 -->
+                    <div class="partner-card" data-category="train">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-train"></i> Đường sắt</span>
+                        <div class="partner-card-logo">
+                            <img src="images/logo-TàuSE3SE7.jpg" alt="Tàu SE3 SE7">
+                        </div>
+                        <h4 class="partner-card-name">Tàu 5★ SE3 / SE7</h4>
+                        <p class="partner-card-sub">Tàu Hỏa Hạng Sang</p>
+                    </div>
+
+                    <!-- Ambassador Cruise -->
+                    <div class="partner-card" data-category="cruise">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-ship"></i> Du thuyền</span>
+                        <div class="partner-card-logo">
+                            <img src="images/logo-Ambassador Cruise.jpg" alt="Ambassador Cruise">
+                        </div>
+                        <h4 class="partner-card-name">Ambassador Cruise</h4>
+                        <p class="partner-card-sub">Du Thuyền 5★ Hạ Long</p>
+                    </div>
+
+                    <!-- Grand Pioneers -->
+                    <div class="partner-card" data-category="cruise">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-ship"></i> Du thuyền</span>
+                        <div class="partner-card-logo">
+                            <img src="images/logo-Grand Pioneers.jpg" alt="Grand Pioneers">
+                        </div>
+                        <h4 class="partner-card-name">Grand Pioneers</h4>
+                        <p class="partner-card-sub">Du Thuyền Đẳng Cấp</p>
+                    </div>
+
+                    <!-- Scarlet Pearl -->
+                    <div class="partner-card" data-category="cruise">
+                        <span class="partner-cat-badge"><i class="fa-solid fa-ship"></i> Du thuyền</span>
+                        <div class="partner-card-logo">
+                            <img src="images/logo-Scarlet Pearl.png" alt="Scarlet Pearl">
+                        </div>
+                        <h4 class="partner-card-name">Scarlet Pearl</h4>
+                        <p class="partner-card-sub">Sang Trọng & Tinh Tế</p>
+                    </div>
+
+                </div>
+
             </div>
-
-            <div class="service">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Thanh toán an toàn</h3>
-                <p>Bảo mật tuyệt đối với nhiều hình thức.</p>
-            </div>
-
-            <div class="service">
-                <i class="fa-solid fa-ticket"></i>
-                <h3>Đặt vé nhanh chóng</h3>
-                <p>Quy trình đơn giản, xác nhận tức thì.</p>
-            </div>
-
         </section>
 
     </main>
@@ -424,7 +578,75 @@
             <img src="images/bocongthuong.png" alt="Bộ Công Thương" class="bct">
         </div>
 
-    </footer>
+    <script>
+    const reviewsData = [
+        {
+            service: "Du thuyền Heritage Bình Chuẩn",
+            text: "Chị rất cảm ơn team đã tư vấn cho chị chọn du thuyền Heritage Bình Chuẩn. Bố mẹ chị rất ưng ý em ạ! Tàu đẹp, mang đậm phong cách Á Đông. Đồ ăn hợp khẩu vị. Các bạn nhân viên trên tàu nhiệt tình và chu đáo.",
+            author: "CHỊ THU HÀ -"
+        },
+        {
+            service: "Chuyến bay TP.HCM → Hà Nội (Vietnam Airlines)",
+            text: "Vé đặt rất nhanh chóng, nhân viên hỗ trợ nhiệt tình chọn chặng bay giờ đẹp. Chuyến bay khởi hành đúng giờ, dịch vụ hành lý chu đáo. Lần sau chắc chắn sẽ tiếp tục ủng hộ!",
+            author: "ANH KHÁNH -"
+        },
+        {
+            service: "Du thuyền Ambassador Hạ Long",
+            text: "Chuyến đi 2 ngày 1 đêm trên du thuyền Ambassador tuyệt vời vượt mong đợi. Phòng ốc rộng rãi, view vịnh triệu đô. Đồ ăn buffet hải sản tươi ngon phong phú.",
+            author: "CHỊ LINH - ANH DŨNG -"
+        },
+        {
+            service: "Vé tàu hỏa chất lượng cao Sài Gòn → Nha Trang",
+            text: "Tàu SE3 giường nằm 4 điều hòa rất sạch sẽ và êm ái. Đặt vé trực tuyến xác nhận tức thì, không phải xếp hàng mua tại ga. Dịch vụ rất tiện lợi cho du lịch gia đình.",
+            author: "BẠN MINH HOÀNG -"
+        },
+        {
+            service: "Du thuyền Scarlet Pearl",
+            text: "Cả nhóm bạn mình rất hài lòng với du thuyền Scarlet Pearl. Chèo thuyền Kayak khám phá hang động rất thích, nhân viên hướng dẫn thân thiện và chụp ảnh rất đẹp!",
+            author: "CÔ THANH HẰNG VÀ BẠN -"
+        }
+    ];
 
+    function selectReview(index, element) {
+        const item = reviewsData[index];
+        if (!item) return;
+        
+        const serviceEl = document.getElementById('review-service');
+        const textEl = document.getElementById('review-text');
+        const authorEl = document.getElementById('review-author');
+        
+        if (serviceEl && textEl && authorEl) {
+            serviceEl.style.opacity = '0';
+            textEl.style.opacity = '0';
+            authorEl.style.opacity = '0';
+            
+            setTimeout(() => {
+                serviceEl.textContent = item.service;
+                textEl.textContent = item.text;
+                authorEl.textContent = item.author;
+                
+                serviceEl.style.opacity = '1';
+                textEl.style.opacity = '1';
+                authorEl.style.opacity = '1';
+            }, 150);
+        }
+
+        document.querySelectorAll('.testimonial-pills .pill-btn').forEach(btn => btn.classList.remove('active'));
+        if (element) element.classList.add('active');
+    }
+
+    function filterPartners(category, element) {
+        document.querySelectorAll('.partner-tab').forEach(tab => tab.classList.remove('active'));
+        if (element) element.classList.add('active');
+
+        document.querySelectorAll('.partner-card').forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    </script>
 </body>
 </html>
