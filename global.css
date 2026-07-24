@@ -7,10 +7,10 @@
 
 :root {
     /* ── Màu chính ── */
-    --primary: #0E4F4F;
-    --primary-light: #1a7a7a;
-    --primary-bg: #f0f9f9;
-    --primary-hover: #0a3d3d;
+     --primary: #00CFE8;
+    --primary-light: #4DE1F7;
+    --primary-bg: #EAFBFE;
+    --primary-hover: #00AFC4;
 
     /* ── Màu xám ── */
     --gray-50: #F9FAFB;
