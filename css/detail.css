@@ -1,16 +1,16 @@
 /* =====================================================
-   MIXIVIVU BENCHMARK DETAIL PAGE STYLESHEET
+   DETAIL PAGE STYLESHEET - 6 Thái Tử
    ===================================================== */
 
 /* ── Container ── */
-.mixi-detail-container {
+.detail-container {
     max-width: 1140px;
     margin: 30px auto 60px;
     padding: 0 20px;
 }
 
 /* ── Header Title & Price Bar ── */
-.mixi-detail-header {
+.detail-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -18,7 +18,7 @@
     margin-bottom: 24px;
 }
 
-.mixi-detail-title-wrap h1 {
+.detail-title-wrap h1 {
     font-size: 32px;
     font-weight: 800;
     color: #0F172A;
@@ -26,7 +26,7 @@
     line-height: 1.25;
 }
 
-.mixi-detail-meta {
+.detail-meta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -34,7 +34,7 @@
     font-size: 13px;
 }
 
-.mixi-detail-rating {
+.detail-rating {
     background: #FEF08A;
     color: #854D0E;
     font-weight: 700;
@@ -45,20 +45,20 @@
     gap: 4px;
 }
 
-.mixi-detail-location {
+.detail-location {
     color: #64748B;
     display: inline-flex;
     align-items: center;
     gap: 6px;
 }
 
-.mixi-detail-location a {
+.detail-location a {
     color: #00CFE8;
     text-decoration: underline;
     font-weight: 600;
 }
 
-.mixi-detail-dash {
+.detail-dash {
     color: #00CFE8;
     letter-spacing: 2px;
     font-weight: 800;
@@ -66,25 +66,25 @@
     margin-top: 14px;
 }
 
-.mixi-detail-price-top {
+.detail-price-top {
     text-align: right;
     flex-shrink: 0;
 }
 
-.mixi-detail-price-top .price-num {
+.detail-price-top .price-num {
     font-size: 32px;
     font-weight: 800;
     color: #008D9E;
 }
 
-.mixi-detail-price-top .price-unit {
+.detail-price-top .price-unit {
     font-size: 16px;
     color: #475569;
     font-weight: 600;
 }
 
 /* ── Gallery Showcase ── */
-.mixi-detail-gallery {
+.detail-gallery {
     position: relative;
     border-radius: 24px;
     overflow: hidden;
@@ -92,19 +92,19 @@
     background: #000;
 }
 
-.mixi-main-photo-box {
+.main-photo-box {
     position: relative;
     width: 100%;
     height: 440px;
 }
 
-.mixi-main-photo-box img {
+.main-photo-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.mixi-gallery-thumbs {
+.gallery-thumbs {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -118,7 +118,7 @@
     z-index: 5;
 }
 
-.mixi-thumb-item {
+.thumb-item {
     width: 54px;
     height: 38px;
     border-radius: 8px;
@@ -129,20 +129,20 @@
     transition: all 0.2s ease;
 }
 
-.mixi-thumb-item.active,
-.mixi-thumb-item:hover {
+.thumb-item.active,
+.thumb-item:hover {
     border-color: #00CFE8;
     opacity: 1;
     transform: scale(1.05);
 }
 
-.mixi-thumb-item img {
+.thumb-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.mixi-gallery-nav {
+.gallery-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -161,16 +161,16 @@
     transition: all 0.2s ease;
 }
 
-.mixi-gallery-nav:hover {
+.gallery-nav:hover {
     background: #00CFE8;
     color: #ffffff;
 }
 
-.mixi-gallery-nav.prev { left: 16px; }
-.mixi-gallery-nav.next { right: 16px; }
+.gallery-nav.prev { left: 16px; }
+.gallery-nav.next { right: 16px; }
 
 /* ── Sticky Navigation Tabs Bar ── */
-.mixi-sticky-tabs {
+.sticky-tabs {
     position: sticky;
     top: 80px;
     background: #ffffff;
@@ -180,13 +180,13 @@
     border-bottom: 1px solid #E2E8F0;
 }
 
-.mixi-tabs-list {
+.tabs-list {
     display: flex;
     gap: 12px;
     overflow-x: auto;
 }
 
-.mixi-tab-link {
+.tab-link {
     padding: 8px 20px;
     border-radius: 100px;
     font-size: 14px;
@@ -198,22 +198,22 @@
     border: 1px solid transparent;
 }
 
-.mixi-tab-link.active,
-.mixi-tab-link:hover {
+.tab-link.active,
+.tab-link:hover {
     background: #F1F5F9;
     color: #0F172A;
     border-color: #CBD5E1;
 }
 
 /* ── Section Title Standard ── */
-.mixi-sec-title {
+.sec-title {
     font-size: 26px;
     font-weight: 800;
     color: #0F172A;
     margin-bottom: 6px;
 }
 
-.mixi-sec-dash {
+.sec-dash {
     color: #00CFE8;
     letter-spacing: 2px;
     font-weight: 800;
@@ -221,20 +221,20 @@
 }
 
 /* ── Section 1: Highlights & Info Box Grid ── */
-.mixi-highlights-grid {
+.highlights-grid {
     display: grid;
     grid-template-columns: 1fr 340px;
     gap: 40px;
     margin-bottom: 60px;
 }
 
-.mixi-highlights-bullets {
+.highlights-bullets {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.mixi-bullet-item {
+.bullet-item {
     display: flex;
     align-items: flex-start;
     gap: 14px;
@@ -243,14 +243,14 @@
     color: #334155;
 }
 
-.mixi-bullet-item i {
+.bullet-item i {
     color: #00CFE8;
     font-size: 18px;
     margin-top: 3px;
     flex-shrink: 0;
 }
 
-.mixi-info-card {
+.info-card {
     background: #ffffff;
     border: 1px solid #E2E8F0;
     border-radius: 24px;
@@ -258,7 +258,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-.mixi-info-card h4 {
+.info-card h4 {
     font-size: 16px;
     font-weight: 800;
     color: #0F172A;
@@ -267,7 +267,7 @@
     border-bottom: 1px solid #F1F5F9;
 }
 
-.mixi-info-row {
+.info-row {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -276,14 +276,14 @@
     line-height: 1.5;
 }
 
-.mixi-info-row .label {
+.info-row .label {
     color: #64748B;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.mixi-info-row .val {
+.info-row .val {
     color: #0F172A;
     font-weight: 700;
     text-align: right;
@@ -291,7 +291,7 @@
 }
 
 /* ── Section 2: Interactive Room / Seat Selection Box ── */
-.mixi-pricing-section {
+.pricing-section {
     background: #F8FAFC;
     border-radius: 28px;
     padding: 40px;
@@ -300,14 +300,14 @@
     position: relative;
 }
 
-.mixi-pricing-top {
+.pricing-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
 }
 
-.mixi-clear-btn {
+.clear-btn {
     background: #ffffff;
     border: 1px solid #CBD5E1;
     padding: 6px 16px;
@@ -321,14 +321,14 @@
     gap: 6px;
 }
 
-.mixi-room-list {
+.room-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin-bottom: 32px;
 }
 
-.mixi-room-item {
+.room-item {
     background: #ffffff;
     border-radius: 20px;
     padding: 16px 24px;
@@ -340,13 +340,13 @@
     border: 1px solid #E2E8F0;
 }
 
-.mixi-room-left {
+.room-left {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.mixi-room-img {
+.room-img {
     width: 70px;
     height: 70px;
     border-radius: 12px;
@@ -354,43 +354,43 @@
     flex-shrink: 0;
 }
 
-.mixi-room-details h3 {
+.room-details h3 {
     font-size: 16px;
     font-weight: 800;
     color: #0F172A;
     margin-bottom: 4px;
 }
 
-.mixi-room-details p {
+.room-details p {
     font-size: 13px;
     color: #64748B;
     display: flex;
     gap: 12px;
 }
 
-.mixi-room-right {
+.room-right {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.mixi-room-price {
+.room-price {
     text-align: right;
 }
 
-.mixi-room-price .num {
+.room-price .num {
     font-size: 18px;
     font-weight: 800;
     color: #008D9E;
 }
 
-.mixi-room-price .unit {
+.room-price .unit {
     font-size: 11px;
     color: #64748B;
 }
 
 /* Counter Control (- 0 +) */
-.mixi-counter-control {
+.counter-control {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -399,7 +399,7 @@
     padding: 4px 12px;
 }
 
-.mixi-counter-btn {
+.counter-btn {
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -415,12 +415,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-.mixi-counter-btn:disabled {
+.counter-btn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
 }
 
-.mixi-counter-val {
+.counter-val {
     font-size: 15px;
     font-weight: 700;
     color: #0F172A;
@@ -429,7 +429,7 @@
 }
 
 /* Bottom Total & Booking Button Bar */
-.mixi-pricing-bottom-bar {
+.pricing-bottom-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -437,25 +437,25 @@
     border-top: 1px solid #E2E8F0;
 }
 
-.mixi-total-left span {
+.total-left span {
     font-size: 13px;
     color: #64748B;
     display: block;
 }
 
-.mixi-total-left h2 {
+.total-left h2 {
     font-size: 24px;
     font-weight: 800;
     color: #0F172A;
 }
 
-.mixi-total-actions {
+.total-actions {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.mixi-charter-btn {
+.charter-btn {
     background: #ffffff;
     border: 1px solid #CBD5E1;
     padding: 12px 24px;
@@ -467,7 +467,7 @@
     cursor: pointer;
 }
 
-.mixi-book-now-btn {
+.book-now-btn {
     background: #00CFE8;
     color: #ffffff;
     border: none;
@@ -483,25 +483,25 @@
     transition: all 0.25s ease;
 }
 
-.mixi-book-now-btn:hover {
+.book-now-btn:hover {
     background: #00B4CC;
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 207, 232, 0.45);
 }
 
 /* ── Section 3: Detailed Description ── */
-.mixi-intro-section {
+.intro-section {
     margin-bottom: 60px;
 }
 
-.mixi-intro-content p {
+.intro-content p {
     font-size: 15px;
     line-height: 1.8;
     color: #334155;
     margin-bottom: 24px;
 }
 
-.mixi-intro-image {
+.intro-image {
     width: 100%;
     max-height: 500px;
     border-radius: 24px;
@@ -509,27 +509,27 @@
 }
 
 /* ── Section 4: Rules & FAQ ── */
-.mixi-rules-section {
+.rules-section {
     margin-bottom: 60px;
 }
 
-.mixi-rule-box {
+.rule-box {
     margin-bottom: 28px;
 }
 
-.mixi-rule-box h3 {
+.rule-box h3 {
     font-size: 22px;
     font-weight: 800;
     color: #0F172A;
     margin-bottom: 4px;
 }
 
-.mixi-rule-box p {
+.rule-box p {
     font-size: 14px;
     color: #475569;
 }
 
-.mixi-rule-box a {
+.rule-box a {
     color: #00CFE8;
     font-weight: 700;
     text-decoration: none;
@@ -537,28 +537,28 @@
 
 /* Responsive */
 @media (max-width: 992px) {
-    .mixi-detail-header {
+    .detail-header {
         flex-direction: column;
     }
 
-    .mixi-detail-price-top {
+    .detail-price-top {
         text-align: left;
     }
 
-    .mixi-highlights-grid {
+    .highlights-grid {
         grid-template-columns: 1fr;
     }
 
-    .mixi-main-photo-box {
+    .main-photo-box {
         height: 280px;
     }
 
-    .mixi-room-item {
+    .room-item {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .mixi-room-right {
+    .room-right {
         width: 100%;
         justify-content: space-between;
     }

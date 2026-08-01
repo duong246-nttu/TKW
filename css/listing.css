@@ -1,35 +1,40 @@
 /* =====================================================
-   MIXIVIVU HERO BANNER & SEARCH FORM CSS
+   HERO BANNER & SEARCH FORM CSS - 6 Thái Tử
    ===================================================== */
 
 /* ── Hero Banner Outer Section ── */
-.mixi-hero-banner-section {
+.hero-banner-section {
     max-width: 1240px;
     margin: 20px auto 0;
     padding: 0 16px;
     position: relative;
 }
 
-.mixi-banner-bg {
+.banner-bg {
     background: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 50%, #00CFE8 100%);
     border-radius: 28px;
-    padding: 36px 24px 100px;
+    padding: 0 0 100px; /* chừa khoảng trống dưới cho khung tìm kiếm đè lên */
     text-align: center;
     position: relative;
+    min-height: 320px;
     overflow: hidden;
 }
 
-.mixi-banner-img {
-    max-height: 280px;
-    width: auto;
-    max-width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* phủ kín toàn bộ ô, khung tìm kiếm sẽ đè lên trên */
+    max-height: none;
+    max-width: none;
+    border-radius: 28px;
+    box-shadow: none;
     object-fit: cover;
 }
 
 /* ── Overlapping White Search Card ── */
-.mixi-search-card-wrapper {
+.search-card-wrapper {
     max-width: 1060px;
     margin: -80px auto 0;
     padding: 0 16px;
@@ -37,15 +42,17 @@
     z-index: 10;
 }
 
-.mixi-search-card {
-    background: #ffffff;
+.search-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 28px;
     padding: 36px 40px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-    border: 1px solid #F1F5F9;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.mixi-search-card h2 {
+.search-card h2 {
     font-size: 28px;
     font-weight: 800;
     color: #0F172A;
@@ -53,7 +60,7 @@
     margin-bottom: 6px;
 }
 
-.mixi-search-card .mixi-sub {
+.search-card .sub {
     font-size: 14px;
     color: #64748B;
     text-align: center;
@@ -61,7 +68,7 @@
 }
 
 /* Options Bar (Radio & Checkbox) */
-.mixi-options-bar {
+.options-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,26 +78,26 @@
     font-weight: 600;
 }
 
-.mixi-radio-group {
+.radio-group {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.mixi-radio-item {
+.radio-item {
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
 }
 
-.mixi-radio-item input[type="radio"] {
+.radio-item input[type="radio"] {
     accent-color: var(--primary, #00CFE8);
     width: 16px;
     height: 16px;
 }
 
-.mixi-checkbox-right {
+.checkbox-right {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -98,51 +105,51 @@
     color: #64748B;
 }
 
-.mixi-checkbox-right input[type="checkbox"] {
+.checkbox-right input[type="checkbox"] {
     accent-color: var(--primary, #00CFE8);
     width: 16px;
     height: 16px;
 }
 
 /* Input Fields Grid */
-.mixi-form-grid {
+.form-grid {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.mixi-form-row {
+.form-row {
     display: grid;
     gap: 16px;
 }
 
-.mixi-form-row.col-2 {
+.form-row.col-2 {
     grid-template-columns: 1fr 1fr;
 }
 
-.mixi-form-row.col-1 {
+.form-row.col-1 {
     grid-template-columns: 1fr;
 }
 
-.mixi-form-row.col-4 {
+.form-row.col-4 {
     grid-template-columns: 1fr 1fr 1fr 1.2fr;
     align-items: end;
 }
 
-.mixi-field-box {
+.field-box {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.mixi-field-box label {
+.field-box label {
     font-size: 12px;
     font-weight: 700;
     color: #475569;
     padding-left: 4px;
 }
 
-.mixi-input-wrap {
+.input-wrap {
     background: #ffffff;
     border: 1px solid #E2E8F0;
     border-radius: 100px;
@@ -153,18 +160,18 @@
     transition: all 0.2s ease;
 }
 
-.mixi-input-wrap:focus-within {
+.input-wrap:focus-within {
     border-color: var(--primary, #00CFE8);
     box-shadow: 0 0 0 3px rgba(0, 207, 232, 0.15);
 }
 
-.mixi-input-wrap i {
+.input-wrap i {
     color: #94A3B8;
     font-size: 15px;
 }
 
-.mixi-input-wrap input,
-.mixi-input-wrap select {
+.input-wrap input,
+.input-wrap select {
     border: none;
     outline: none;
     background: transparent;
@@ -174,7 +181,7 @@
     font-weight: 500;
 }
 
-.mixi-submit-btn {
+.submit-btn {
     background: var(--primary, #00CFE8);
     color: #ffffff;
     border: none;
@@ -193,42 +200,42 @@
     box-shadow: 0 4px 14px rgba(0, 207, 232, 0.35);
 }
 
-.mixi-submit-btn:hover {
+.submit-btn:hover {
     background: #00B4CC;
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 207, 232, 0.45);
 }
 
 /* ── Listing Main Container ── */
-.mixi-listing-container {
+.listing-container {
     max-width: 1240px;
     margin: 0 auto;
     padding: 40px 24px 80px;
 }
 
 /* Results Header Bar */
-.mixi-results-header {
+.results-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 28px;
 }
 
-.mixi-results-count h2 {
+.results-count h2 {
     font-size: 24px;
     font-weight: 800;
     color: #0F172A;
     margin-bottom: 4px;
 }
 
-.mixi-results-dash {
+.results-dash {
     color: var(--primary, #00CFE8);
     letter-spacing: 2px;
     font-weight: 700;
     font-size: 14px;
 }
 
-.mixi-sort-dropdown select {
+.sort-dropdown select {
     background: #ffffff;
     border: 1px solid #CBD5E1;
     padding: 8px 16px;
@@ -240,7 +247,7 @@
 }
 
 /* Two-Column Grid */
-.mixi-listing-grid {
+.listing-grid {
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 32px;
@@ -248,7 +255,7 @@
 }
 
 /* Left Filter Sidebar */
-.mixi-filter-sidebar {
+.filter-sidebar {
     background: #ffffff;
     border: 1px solid #E2E8F0;
     border-radius: 20px;
@@ -260,7 +267,7 @@
     overflow-y: auto;
 }
 
-.mixi-filter-top {
+.filter-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -269,13 +276,13 @@
     border-bottom: 1px solid #F1F5F9;
 }
 
-.mixi-filter-top h3 {
+.filter-top h3 {
     font-size: 16px;
     font-weight: 800;
     color: #0F172A;
 }
 
-.mixi-filter-clear {
+.filter-clear {
     font-size: 13px;
     color: var(--primary, #00CFE8);
     text-decoration: none;
@@ -283,24 +290,24 @@
     cursor: pointer;
 }
 
-.mixi-filter-group {
+.filter-group {
     margin-bottom: 24px;
 }
 
-.mixi-filter-title {
+.filter-title {
     font-size: 14px;
     font-weight: 700;
     color: #334155;
     margin-bottom: 12px;
 }
 
-.mixi-checkbox-list {
+.checkbox-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.mixi-checkbox-item {
+.checkbox-item {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -310,7 +317,7 @@
     user-select: none;
 }
 
-.mixi-checkbox-item input[type="checkbox"] {
+.checkbox-item input[type="checkbox"] {
     width: 16px;
     height: 16px;
     accent-color: var(--primary, #00CFE8);
@@ -318,13 +325,13 @@
 }
 
 /* Right Listing Cards List */
-.mixi-cards-list {
+.cards-list {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.mixi-product-card {
+.product-card {
     background: #ffffff;
     border: 1px solid #E2E8F0;
     border-radius: 20px;
@@ -335,14 +342,14 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
-.mixi-product-card:hover {
+.product-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
     border-color: #CBD5E1;
 }
 
 /* Card Image Left */
-.mixi-card-img-wrap {
+.card-img-wrap {
     width: 300px;
     height: 200px;
     flex-shrink: 0;
@@ -351,18 +358,18 @@
     position: relative;
 }
 
-.mixi-card-img-wrap img {
+.card-img-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.mixi-product-card:hover .mixi-card-img-wrap img {
+.product-card:hover .card-img-wrap img {
     transform: scale(1.05);
 }
 
-.mixi-rating-badge {
+.rating-badge {
     position: absolute;
     top: 12px;
     left: 12px;
@@ -379,14 +386,14 @@
 }
 
 /* Card Info Right */
-.mixi-card-info {
+.card-info {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.mixi-card-location {
+.card-location {
     font-size: 12px;
     color: #64748B;
     font-weight: 500;
@@ -396,7 +403,7 @@
     margin-bottom: 6px;
 }
 
-.mixi-card-title {
+.card-title {
     font-size: 18px;
     font-weight: 800;
     color: #0F172A;
@@ -404,7 +411,7 @@
     line-height: 1.35;
 }
 
-.mixi-card-sub {
+.card-sub {
     font-size: 13px;
     color: #64748B;
     display: flex;
@@ -413,14 +420,14 @@
     margin-bottom: 12px;
 }
 
-.mixi-tags-row {
+.tags-row {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 16px;
 }
 
-.mixi-tag-badge {
+.tag-badge {
     background: #F1F5F9;
     color: #475569;
     font-size: 12px;
@@ -430,7 +437,7 @@
 }
 
 /* Bottom Price & CTA */
-.mixi-card-bottom {
+.card-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -438,24 +445,24 @@
     border-top: 1px solid #F1F5F9;
 }
 
-.mixi-price-wrap {
+.price-wrap {
     display: flex;
     align-items: baseline;
     gap: 4px;
 }
 
-.mixi-price-num {
+.price-num {
     font-size: 20px;
     font-weight: 800;
     color: #0F172A;
 }
 
-.mixi-price-unit {
+.price-unit {
     font-size: 13px;
     color: #64748B;
 }
 
-.mixi-btn-book {
+.btn-book {
     background: var(--primary, #00CFE8);
     color: #ffffff;
     text-decoration: none;
@@ -467,14 +474,14 @@
     display: inline-block;
 }
 
-.mixi-btn-book:hover {
+.btn-book:hover {
     background: #00B4CC;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 207, 232, 0.3);
 }
 
 /* ── Pagination ── */
-.mixi-pagination-wrap {
+.pagination-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -483,18 +490,18 @@
     border-top: 1px solid #E2E8F0;
 }
 
-.mixi-pagination-info {
+.pagination-info {
     font-size: 14px;
     color: #64748B;
 }
 
-.mixi-pagination-list {
+.pagination-list {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.mixi-page-btn {
+.page-btn {
     width: 36px;
     height: 36px;
     border-radius: 100px;
@@ -510,53 +517,58 @@
     transition: all 0.2s ease;
 }
 
-.mixi-page-btn.active,
-.mixi-page-btn:hover {
+.page-btn.active,
+.page-btn:hover {
     background: var(--primary, #00CFE8);
     color: #ffffff;
     border-color: var(--primary, #00CFE8);
 }
 
-.mixi-page-nav {
+.page-nav {
     padding: 0 14px;
     width: auto;
     border-radius: 100px;
 }
 
 @media (max-width: 992px) {
-    .mixi-search-card-wrapper {
+    .banner-bg {
+        padding-bottom: 60px;
+        min-height: 220px;
+    }
+
+    .search-card-wrapper {
         margin-top: -40px;
     }
 
-    .mixi-search-card {
+    .search-card {
         padding: 24px 20px;
     }
 
-    .mixi-form-row.col-2,
-    .mixi-form-row.col-4 {
+    .form-row.col-2,
+    .form-row.col-4 {
         grid-template-columns: 1fr;
     }
 
-    .mixi-options-bar {
+    .options-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
     }
 
-    .mixi-listing-grid {
+    .listing-grid {
         grid-template-columns: 1fr;
     }
 
-    .mixi-filter-sidebar {
+    .filter-sidebar {
         position: static;
         max-height: none;
     }
 
-    .mixi-product-card {
+    .product-card {
         flex-direction: column;
     }
 
-    .mixi-card-img-wrap {
+    .card-img-wrap {
         width: 100%;
         height: 220px;
     }

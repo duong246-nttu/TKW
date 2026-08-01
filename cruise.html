@@ -6,7 +6,7 @@
     <title>6 Thái Tử - Tìm du thuyền Hạ Long & Lan Hạ</title>
 
     <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="css/listing-mixivivu.css">
+    <link rel="stylesheet" href="css/listing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.css">
@@ -44,44 +44,44 @@
     <main>
 
         <!-- ═══ HERO BANNER SECTION ═══ -->
-        <section class="mixi-hero-banner-section">
-            <div class="mixi-banner-bg">
-                <img src="images/banner-cruise.png" alt="Banner Du Thuyền 6 Thái Tử" class="mixi-banner-img">
+        <section class="hero-banner-section">
+            <div class="banner-bg">
+                <img src="images/banner-cruise.png" alt="Banner Du Thuyền 6 Thái Tử" class="banner-img">
             </div>
         </section>
 
         <!-- ═══ OVERLAPPING SEARCH CARD ═══ -->
-        <div class="mixi-search-card-wrapper">
-            <div class="mixi-search-card">
+        <div class="search-card-wrapper">
+            <div class="search-card">
                 <h2>Mở cánh cửa khám phá cùng 6 Thái Tử</h2>
-                <p class="mixi-sub">Khám phá thiên đường biển đảo cùng du thuyền 5★</p>
+                <p class="sub">Khám phá thiên đường biển đảo cùng du thuyền 5★</p>
 
-                <form action="cruise-result.html" class="mixi-form-grid">
+                <form action="cruise-result.html" class="form-grid">
 
                     <!-- Options Bar (Radio & Checkbox) -->
-                    <div class="mixi-options-bar">
-                        <div class="mixi-radio-group">
-                            <label class="mixi-radio-item">
+                    <div class="options-bar">
+                        <div class="radio-group">
+                            <label class="radio-item">
                                 <input type="radio" name="tripType" value="oneWay" checked>
                                 <span>2 Ngày 1 Đêm</span>
                             </label>
-                            <label class="mixi-radio-item">
+                            <label class="radio-item">
                                 <input type="radio" name="tripType" value="roundTrip">
                                 <span>3 Ngày 2 Đêm</span>
                             </label>
                         </div>
 
-                        <label class="mixi-checkbox-right">
+                        <label class="checkbox-right">
                             <input type="checkbox">
                             <span>Ưu đãi tốt nhất</span>
                         </label>
                     </div>
 
                     <!-- Row 1: Điểm đến & Hãng du thuyền -->
-                    <div class="mixi-form-row col-2">
-                        <div class="mixi-field-box">
+                    <div class="form-row col-2">
+                        <div class="field-box">
                             <label>Khu vực vịnh</label>
-                            <div class="mixi-input-wrap">
+                            <div class="input-wrap">
                                 <i class="fa-solid fa-ship"></i>
                                 <select>
                                     <option>Vịnh Hạ Long</option>
@@ -91,9 +91,9 @@
                             </div>
                         </div>
 
-                        <div class="mixi-field-box">
+                        <div class="field-box">
                             <label>Hạng du thuyền</label>
-                            <div class="mixi-input-wrap">
+                            <div class="input-wrap">
                                 <i class="fa-solid fa-anchor"></i>
                                 <select>
                                     <option>Tất cả du thuyền 5★</option>
@@ -107,10 +107,10 @@
                     </div>
 
                     <!-- Row 2: Ngày đi -->
-                    <div class="mixi-form-row col-1">
-                        <div class="mixi-field-box">
+                    <div class="form-row col-1">
+                        <div class="field-box">
                             <label>Ngày khởi hành</label>
-                            <div class="mixi-input-wrap">
+                            <div class="input-wrap">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <input type="date" value="2026-07-24">
                             </div>
@@ -118,33 +118,33 @@
                     </div>
 
                     <!-- Row 3: Hành khách & Nút tìm kiếm -->
-                    <div class="mixi-form-row col-4">
-                        <div class="mixi-field-box">
+                    <div class="form-row col-4">
+                        <div class="field-box">
                             <label>Người lớn</label>
-                            <div class="mixi-input-wrap">
+                            <div class="input-wrap">
                                 <i class="fa-regular fa-user"></i>
                                 <input type="number" value="2" min="1">
                             </div>
                         </div>
 
-                        <div class="mixi-field-box">
+                        <div class="field-box">
                             <label>Trẻ em</label>
-                            <div class="mixi-input-wrap">
+                            <div class="input-wrap">
                                 <i class="fa-regular fa-user"></i>
                                 <input type="number" value="0" min="0">
                             </div>
                         </div>
 
-                        <div class="mixi-field-box">
+                        <div class="field-box">
                             <label>Em bé</label>
-                            <div class="mixi-input-wrap">
+                            <div class="input-wrap">
                                 <i class="fa-regular fa-user"></i>
                                 <input type="number" value="0" min="0">
                             </div>
                         </div>
 
-                        <div class="mixi-field-box">
-                            <button type="submit" class="mixi-submit-btn">
+                        <div class="field-box">
+                            <button type="submit" class="submit-btn">
                                 Tìm du thuyền
                             </button>
                         </div>
@@ -155,16 +155,16 @@
         </div>
 
         <!-- ═══ MAIN LISTING CONTAINER ═══ -->
-        <div class="mixi-listing-container">
+        <div class="listing-container">
 
             <!-- Results Count & Sort Header -->
-            <div class="mixi-results-header" data-aos="fade-up">
-                <div class="mixi-results-count">
+            <div class="results-header" data-aos="fade-up">
+                <div class="results-count">
                     <h2>Tìm thấy 92 kết quả</h2>
-                    <div class="mixi-results-dash">///////</div>
+                    <div class="results-dash">///////</div>
                 </div>
 
-                <div class="mixi-sort-dropdown">
+                <div class="sort-dropdown">
                     <select>
                         <option>Không sắp xếp</option>
                         <option>Giá tăng dần</option>
@@ -175,206 +175,206 @@
             </div>
 
             <!-- 2-Column Grid -->
-            <div class="mixi-listing-grid">
+            <div class="listing-grid">
 
                 <!-- Left Sidebar Filter -->
-                <aside class="mixi-filter-sidebar" data-aos="fade-up">
-                    <div class="mixi-filter-top">
+                <aside class="filter-sidebar" data-aos="fade-up">
+                    <div class="filter-top">
                         <h3>Lọc kết quả</h3>
-                        <a class="mixi-filter-clear">Xóa lọc</a>
+                        <a class="filter-clear">Xóa lọc</a>
                     </div>
 
-                    <div class="mixi-filter-group">
-                        <div class="mixi-filter-title">Xếp hạng sao</div>
-                        <div class="mixi-checkbox-list">
-                            <label class="mixi-checkbox-item"><input type="checkbox" checked> 5 sao</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> 4 sao</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> 3 sao</label>
+                    <div class="filter-group">
+                        <div class="filter-title">Xếp hạng sao</div>
+                        <div class="checkbox-list">
+                            <label class="checkbox-item"><input type="checkbox" checked> 5 sao</label>
+                            <label class="checkbox-item"><input type="checkbox"> 4 sao</label>
+                            <label class="checkbox-item"><input type="checkbox"> 3 sao</label>
                         </div>
                     </div>
 
-                    <div class="mixi-filter-group">
-                        <div class="mixi-filter-title">Tiện ích</div>
-                        <div class="mixi-checkbox-list">
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Phòng gia đình</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Có bể bơi</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox" checked> Bao gồm tất cả các bữa ăn</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Giáp biển</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Quầy bar</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Lễ tân 24/7</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Bãi tắm riêng</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Nhà hàng</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Wi-Fi miễn phí</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Ban công riêng</label>
-                            <label class="mixi-checkbox-item"><input type="checkbox"> Trung tâm Spa & chăm sóc sức khỏe</label>
+                    <div class="filter-group">
+                        <div class="filter-title">Tiện ích</div>
+                        <div class="checkbox-list">
+                            <label class="checkbox-item"><input type="checkbox"> Phòng gia đình</label>
+                            <label class="checkbox-item"><input type="checkbox"> Có bể bơi</label>
+                            <label class="checkbox-item"><input type="checkbox" checked> Bao gồm tất cả các bữa ăn</label>
+                            <label class="checkbox-item"><input type="checkbox"> Giáp biển</label>
+                            <label class="checkbox-item"><input type="checkbox"> Quầy bar</label>
+                            <label class="checkbox-item"><input type="checkbox"> Lễ tân 24/7</label>
+                            <label class="checkbox-item"><input type="checkbox"> Bãi tắm riêng</label>
+                            <label class="checkbox-item"><input type="checkbox"> Nhà hàng</label>
+                            <label class="checkbox-item"><input type="checkbox"> Wi-Fi miễn phí</label>
+                            <label class="checkbox-item"><input type="checkbox"> Ban công riêng</label>
+                            <label class="checkbox-item"><input type="checkbox"> Trung tâm Spa & chăm sóc sức khỏe</label>
                         </div>
                     </div>
                 </aside>
 
                 <!-- Right Cards List -->
-                <div class="mixi-cards-list">
+                <div class="cards-list">
 
                     <!-- Cruise Card 1 -->
-                    <div class="mixi-product-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="mixi-card-img-wrap">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-img-wrap">
                             <img src="images/Du thuyền Heritage.jpg" alt="Du thuyền Heritage Bình Chuẩn Cát Bà">
-                            <div class="mixi-rating-badge"><i class="fa-solid fa-star"></i> 9.8 (12) đánh giá</div>
+                            <div class="rating-badge"><i class="fa-solid fa-star"></i> 9.8 (12) đánh giá</div>
                         </div>
 
-                        <div class="mixi-card-info">
+                        <div class="card-info">
                             <div>
-                                <div class="mixi-card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</div>
-                                <h3 class="mixi-card-title">Du thuyền Heritage Bình Chuẩn Cát Bà</h3>
-                                <div class="mixi-card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2019 - Tàu vỏ Kim loại - 20 phòng</div>
+                                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</div>
+                                <h3 class="card-title">Du thuyền Heritage Bình Chuẩn Cát Bà</h3>
+                                <div class="card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2019 - Tàu vỏ Kim loại - 20 phòng</div>
 
-                                <div class="mixi-tags-row">
-                                    <span class="mixi-tag-badge">Có bể bơi</span>
-                                    <span class="mixi-tag-badge">Bao gồm tất cả các bữa ăn</span>
-                                    <span class="mixi-tag-badge">Quầy bar</span>
-                                    <span class="mixi-tag-badge">Lễ tân 24/7</span>
-                                    <span class="mixi-tag-badge">Nhà hàng</span>
-                                    <span class="mixi-tag-badge">+ 8</span>
+                                <div class="tags-row">
+                                    <span class="tag-badge">Có bể bơi</span>
+                                    <span class="tag-badge">Bao gồm tất cả các bữa ăn</span>
+                                    <span class="tag-badge">Quầy bar</span>
+                                    <span class="tag-badge">Lễ tân 24/7</span>
+                                    <span class="tag-badge">Nhà hàng</span>
+                                    <span class="tag-badge">+ 8</span>
                                 </div>
                             </div>
 
-                            <div class="mixi-card-bottom">
-                                <div class="mixi-price-wrap">
-                                    <span class="mixi-price-num">4,150,000đ</span>
-                                    <span class="mixi-price-unit">/khách</span>
+                            <div class="card-bottom">
+                                <div class="price-wrap">
+                                    <span class="price-num">4,150,000đ</span>
+                                    <span class="price-unit">/khách</span>
                                 </div>
-                                <a href="cruise-result.html" class="mixi-btn-book">Đặt ngay</a>
+                                <a href="cruise-result.html" class="btn-book">Đặt ngay</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Cruise Card 2 -->
-                    <div class="mixi-product-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="mixi-card-img-wrap">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-img-wrap">
                             <img src="images/Du thuyền Indochine.jpg" alt="Du thuyền Indochine">
-                            <div class="mixi-rating-badge"><i class="fa-solid fa-star"></i> 9.5 (18) đánh giá</div>
+                            <div class="rating-badge"><i class="fa-solid fa-star"></i> 9.5 (18) đánh giá</div>
                         </div>
 
-                        <div class="mixi-card-info">
+                        <div class="card-info">
                             <div>
-                                <div class="mixi-card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Lan Hạ</div>
-                                <h3 class="mixi-card-title">Du thuyền Indochine</h3>
-                                <div class="mixi-card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2019 - Tàu vỏ Kim loại - 43 phòng</div>
+                                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Lan Hạ</div>
+                                <h3 class="card-title">Du thuyền Indochine</h3>
+                                <div class="card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2019 - Tàu vỏ Kim loại - 43 phòng</div>
 
-                                <div class="mixi-tags-row">
-                                    <span class="mixi-tag-badge">Bao gồm tất cả các bữa ăn</span>
-                                    <span class="mixi-tag-badge">Giáp biển</span>
-                                    <span class="mixi-tag-badge">Quầy bar</span>
-                                    <span class="mixi-tag-badge">Lễ tân 24/7</span>
-                                    <span class="mixi-tag-badge">Nhà hàng</span>
-                                    <span class="mixi-tag-badge">+ 7</span>
+                                <div class="tags-row">
+                                    <span class="tag-badge">Bao gồm tất cả các bữa ăn</span>
+                                    <span class="tag-badge">Giáp biển</span>
+                                    <span class="tag-badge">Quầy bar</span>
+                                    <span class="tag-badge">Lễ tân 24/7</span>
+                                    <span class="tag-badge">Nhà hàng</span>
+                                    <span class="tag-badge">+ 7</span>
                                 </div>
                             </div>
 
-                            <div class="mixi-card-bottom">
-                                <div class="mixi-price-wrap">
-                                    <span class="mixi-price-num">4,125,000đ</span>
-                                    <span class="mixi-price-unit">/khách</span>
+                            <div class="card-bottom">
+                                <div class="price-wrap">
+                                    <span class="price-num">4,125,000đ</span>
+                                    <span class="price-unit">/khách</span>
                                 </div>
-                                <a href="cruise-result.html" class="mixi-btn-book">Đặt ngay</a>
+                                <a href="cruise-result.html" class="btn-book">Đặt ngay</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Cruise Card 3 -->
-                    <div class="mixi-product-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="mixi-card-img-wrap">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-img-wrap">
                             <img src="images/Du thuyền Le Theatre.jpeg" alt="Du thuyền Le Theatre">
-                            <div class="mixi-rating-badge"><i class="fa-solid fa-star"></i> 9.6 (21) đánh giá</div>
+                            <div class="rating-badge"><i class="fa-solid fa-star"></i> 9.6 (21) đánh giá</div>
                         </div>
 
-                        <div class="mixi-card-info">
+                        <div class="card-info">
                             <div>
-                                <div class="mixi-card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Lan Hạ</div>
-                                <h3 class="mixi-card-title">Du thuyền Le Theatre</h3>
-                                <div class="mixi-card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2019 - Tàu vỏ Kim loại - 21 phòng</div>
+                                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Lan Hạ</div>
+                                <h3 class="card-title">Du thuyền Le Theatre</h3>
+                                <div class="card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2019 - Tàu vỏ Kim loại - 21 phòng</div>
 
-                                <div class="mixi-tags-row">
-                                    <span class="mixi-tag-badge">Phòng gia đình</span>
-                                    <span class="mixi-tag-badge">Bao gồm tất cả các bữa ăn</span>
-                                    <span class="mixi-tag-badge">Quầy bar</span>
-                                    <span class="mixi-tag-badge">Lễ tân 24/7</span>
-                                    <span class="mixi-tag-badge">Nhà hàng</span>
-                                    <span class="mixi-tag-badge">+ 5</span>
+                                <div class="tags-row">
+                                    <span class="tag-badge">Phòng gia đình</span>
+                                    <span class="tag-badge">Bao gồm tất cả các bữa ăn</span>
+                                    <span class="tag-badge">Quầy bar</span>
+                                    <span class="tag-badge">Lễ tân 24/7</span>
+                                    <span class="tag-badge">Nhà hàng</span>
+                                    <span class="tag-badge">+ 5</span>
                                 </div>
                             </div>
 
-                            <div class="mixi-card-bottom">
-                                <div class="mixi-price-wrap">
-                                    <span class="mixi-price-num">3,700,000đ</span>
-                                    <span class="mixi-price-unit">/khách</span>
+                            <div class="card-bottom">
+                                <div class="price-wrap">
+                                    <span class="price-num">3,700,000đ</span>
+                                    <span class="price-unit">/khách</span>
                                 </div>
-                                <a href="cruise-result.html" class="mixi-btn-book">Đặt ngay</a>
+                                <a href="cruise-result.html" class="btn-book">Đặt ngay</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Cruise Card 4 -->
-                    <div class="mixi-product-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="mixi-card-img-wrap">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-img-wrap">
                             <img src="images/Du thuyền Orchid Trendy.jpg" alt="Du thuyền Orchid Trendy">
-                            <div class="mixi-rating-badge"><i class="fa-solid fa-star"></i> 9.7 (15) đánh giá</div>
+                            <div class="rating-badge"><i class="fa-solid fa-star"></i> 9.7 (15) đánh giá</div>
                         </div>
 
-                        <div class="mixi-card-info">
+                        <div class="card-info">
                             <div>
-                                <div class="mixi-card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</div>
-                                <h3 class="mixi-card-title">Du thuyền Orchid Trendy</h3>
-                                <div class="mixi-card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2017 - Tàu vỏ Kim loại - 20 phòng</div>
+                                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</div>
+                                <h3 class="card-title">Du thuyền Orchid Trendy</h3>
+                                <div class="card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2017 - Tàu vỏ Kim loại - 20 phòng</div>
 
-                                <div class="mixi-tags-row">
-                                    <span class="mixi-tag-badge">Phòng gia đình</span>
-                                    <span class="mixi-tag-badge">Bao gồm tất cả các bữa ăn</span>
-                                    <span class="mixi-tag-badge">Giáp biển</span>
-                                    <span class="mixi-tag-badge">Quầy bar</span>
-                                    <span class="mixi-tag-badge">Lễ tân 24/7</span>
-                                    <span class="mixi-tag-badge">+ 7</span>
+                                <div class="tags-row">
+                                    <span class="tag-badge">Phòng gia đình</span>
+                                    <span class="tag-badge">Bao gồm tất cả các bữa ăn</span>
+                                    <span class="tag-badge">Giáp biển</span>
+                                    <span class="tag-badge">Quầy bar</span>
+                                    <span class="tag-badge">Lễ tân 24/7</span>
+                                    <span class="tag-badge">+ 7</span>
                                 </div>
                             </div>
 
-                            <div class="mixi-card-bottom">
-                                <div class="mixi-price-wrap">
-                                    <span class="mixi-price-num">4,150,000đ</span>
-                                    <span class="mixi-price-unit">/khách</span>
+                            <div class="card-bottom">
+                                <div class="price-wrap">
+                                    <span class="price-num">4,150,000đ</span>
+                                    <span class="price-unit">/khách</span>
                                 </div>
-                                <a href="cruise-result.html" class="mixi-btn-book">Đặt ngay</a>
+                                <a href="cruise-result.html" class="btn-book">Đặt ngay</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Cruise Card 5 -->
-                    <div class="mixi-product-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="mixi-card-img-wrap">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="card-img-wrap">
                             <img src="images/Du thuyền Ambassador.webp" alt="Du thuyền Ambassador Hạ Long">
-                            <div class="mixi-rating-badge"><i class="fa-solid fa-star"></i> 9.8 (45) đánh giá</div>
+                            <div class="rating-badge"><i class="fa-solid fa-star"></i> 9.8 (45) đánh giá</div>
                         </div>
 
-                        <div class="mixi-card-info">
+                        <div class="card-info">
                             <div>
-                                <div class="mixi-card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</div>
-                                <h3 class="mixi-card-title">Du thuyền Ambassador Hạ Long</h3>
-                                <div class="mixi-card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2018 - Tàu vỏ Kim loại - 46 phòng</div>
+                                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Vịnh Hạ Long</div>
+                                <h3 class="card-title">Du thuyền Ambassador Hạ Long</h3>
+                                <div class="card-sub"><i class="fa-solid fa-anchor"></i> Hạ thủy 2018 - Tàu vỏ Kim loại - 46 phòng</div>
 
-                                <div class="mixi-tags-row">
-                                    <span class="mixi-tag-badge">Phòng gia đình</span>
-                                    <span class="mixi-tag-badge">Giáp biển</span>
-                                    <span class="mixi-tag-badge">Quầy bar</span>
-                                    <span class="mixi-tag-badge">Lễ tân 24/7</span>
-                                    <span class="mixi-tag-badge">Nhà hàng</span>
-                                    <span class="mixi-tag-badge">+ 3</span>
+                                <div class="tags-row">
+                                    <span class="tag-badge">Phòng gia đình</span>
+                                    <span class="tag-badge">Giáp biển</span>
+                                    <span class="tag-badge">Quầy bar</span>
+                                    <span class="tag-badge">Lễ tân 24/7</span>
+                                    <span class="tag-badge">Nhà hàng</span>
+                                    <span class="tag-badge">+ 3</span>
                                 </div>
                             </div>
 
-                            <div class="mixi-card-bottom">
-                                <div class="mixi-price-wrap">
-                                    <span class="mixi-price-num">3,850,000đ</span>
-                                    <span class="mixi-price-unit">/khách</span>
+                            <div class="card-bottom">
+                                <div class="price-wrap">
+                                    <span class="price-num">3,850,000đ</span>
+                                    <span class="price-unit">/khách</span>
                                 </div>
-                                <a href="cruise-result.html" class="mixi-btn-book">Đặt ngay</a>
+                                <a href="cruise-result.html" class="btn-book">Đặt ngay</a>
                             </div>
                         </div>
                     </div>
@@ -384,18 +384,18 @@
             </div>
 
             <!-- Pagination -->
-            <div class="mixi-pagination-wrap">
-                <div class="mixi-pagination-info">Đang xem 5 của 92</div>
-                <div class="mixi-pagination-list">
-                    <a href="#" class="mixi-page-btn mixi-page-nav">← Trước</a>
-                    <a href="#" class="mixi-page-btn active">1</a>
-                    <a href="#" class="mixi-page-btn">2</a>
-                    <a href="#" class="mixi-page-btn">3</a>
+            <div class="pagination-wrap">
+                <div class="pagination-info">Đang xem 5 của 92</div>
+                <div class="pagination-list">
+                    <a href="#" class="page-btn page-nav">← Trước</a>
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
                     <span style="color: #94A3B8;">...</span>
-                    <a href="#" class="mixi-page-btn">17</a>
-                    <a href="#" class="mixi-page-btn">18</a>
-                    <a href="#" class="mixi-page-btn">19</a>
-                    <a href="#" class="mixi-page-btn mixi-page-nav">Tiếp →</a>
+                    <a href="#" class="page-btn">17</a>
+                    <a href="#" class="page-btn">18</a>
+                    <a href="#" class="page-btn">19</a>
+                    <a href="#" class="page-btn page-nav">Tiếp →</a>
                 </div>
             </div>
 
