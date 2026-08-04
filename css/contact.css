@@ -137,3 +137,29 @@
     padding: 24px;
   }
 }
+
+@media (max-width: 480px) {
+    .contact-banner {
+        height: 180px;
+    }
+
+    .banner-content h1 {
+        font-size: 22px;
+    }
+
+    .banner-content p {
+        font-size: 13px;
+    }
+
+    .contact-form-section {
+        padding: 40px 16px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 20px;
+    }
+}

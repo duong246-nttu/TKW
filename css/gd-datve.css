@@ -573,3 +573,56 @@
         height: 220px;
     }
 }
+
+@media (max-width: 768px) {
+    .banner-bg {
+        min-height: 180px;
+        padding-bottom: 40px;
+    }
+
+    .banner-bg h1 {
+        font-size: 22px;
+    }
+
+    .search-card {
+        padding: 20px 16px;
+        margin: 0 16px;
+    }
+
+    .results-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .card-info {
+        padding: 16px;
+    }
+
+    .card-info h3 {
+        font-size: 16px;
+    }
+
+    .card-img-wrap {
+        height: 180px;
+    }
+
+    .pagination-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pagination-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-sidebar {
+        margin-bottom: 20px;
+    }
+
+    .radio-group {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

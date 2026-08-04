@@ -235,9 +235,9 @@ function scrollToTop() {
 /* ── 7. Interactive Filter Clear Button (Xóa lọc) ── */
 function initClearFilters() {
     document.addEventListener('click', function(e) {
-        if (e.target && e.target.classList.contains('mixi-filter-clear')) {
+        if (e.target && e.target.classList.contains('filter-clear')) {
             e.preventDefault();
-            const sidebar = e.target.closest('.mixi-filter-sidebar');
+            const sidebar = e.target.closest('.filter-sidebar');
             if (sidebar) {
                 const checkboxes = sidebar.querySelectorAll('input[type="checkbox"]');
                 checkboxes.forEach(cb => {
@@ -248,17 +248,17 @@ function initClearFilters() {
     });
 }
 
-/* ── 8. Mixivivu Detail Interactive Counters (- 0 +) & Total Price Calculation ── */
+/* ── 8. Detail Interactive Counters (- 0 +) & Total Price Calculation ── */
 function initDetailCounters() {
     function updatePricingTotal() {
         const totalEl = document.getElementById('mixiTotalPriceVal');
         if (!totalEl) return;
 
         let total = 0;
-        const roomItems = document.querySelectorAll('.mixi-room-item');
+        const roomItems = document.querySelectorAll('.room-item');
         roomItems.forEach(item => {
             const price = parseInt(item.getAttribute('data-price') || '0', 10);
-            const valEl = item.querySelector('.mixi-counter-val');
+            const valEl = item.querySelector('.counter-val');
             const count = valEl ? parseInt(valEl.textContent || '0', 10) : 0;
             total += price * count;
         });
@@ -268,23 +268,23 @@ function initDetailCounters() {
 
     document.addEventListener('click', function(e) {
         // Plus button
-        if (e.target && e.target.classList.contains('mixi-plus-btn')) {
-            const item = e.target.closest('.mixi-room-item');
-            const valEl = item ? item.querySelector('.mixi-counter-val') : null;
+        if (e.target && e.target.classList.contains('plus-btn')) {
+            const item = e.target.closest('.room-item');
+            const valEl = item ? item.querySelector('.counter-val') : null;
             if (valEl) {
                 let val = parseInt(valEl.textContent || '0', 10);
                 val++;
                 valEl.textContent = val;
-                const minusBtn = item.querySelector('.mixi-minus-btn');
+                const minusBtn = item.querySelector('.minus-btn');
                 if (minusBtn) minusBtn.disabled = false;
                 updatePricingTotal();
             }
         }
 
         // Minus button
-        if (e.target && e.target.classList.contains('mixi-minus-btn')) {
-            const item = e.target.closest('.mixi-room-item');
-            const valEl = item ? item.querySelector('.mixi-counter-val') : null;
+        if (e.target && e.target.classList.contains('minus-btn')) {
+            const item = e.target.closest('.room-item');
+            const valEl = item ? item.querySelector('.counter-val') : null;
             if (valEl) {
                 let val = parseInt(valEl.textContent || '0', 10);
                 if (val > 0) {
@@ -299,11 +299,11 @@ function initDetailCounters() {
         }
 
         // Clear selection button
-        if (e.target && e.target.classList.contains('mixi-clear-rooms-btn')) {
-            const roomItems = document.querySelectorAll('.mixi-room-item');
+        if (e.target && (e.target.classList.contains('clear-rooms-btn') || e.target.closest('.clear-rooms-btn'))) {
+            const roomItems = document.querySelectorAll('.room-item');
             roomItems.forEach(item => {
-                const valEl = item.querySelector('.mixi-counter-val');
-                const minusBtn = item.querySelector('.mixi-minus-btn');
+                const valEl = item.querySelector('.counter-val');
+                const minusBtn = item.querySelector('.minus-btn');
                 if (valEl) valEl.textContent = '0';
                 if (minusBtn) minusBtn.disabled = true;
             });
@@ -311,13 +311,13 @@ function initDetailCounters() {
         }
 
         // Thumbnail gallery click
-        if (e.target && e.target.closest('.mixi-thumb-item')) {
-            const thumb = e.target.closest('.mixi-thumb-item');
+        if (e.target && e.target.closest('.thumb-item')) {
+            const thumb = e.target.closest('.thumb-item');
             const mainImg = document.getElementById('mixiMainGalleryImg');
             if (mainImg && thumb) {
                 const newSrc = thumb.querySelector('img').getAttribute('src');
                 mainImg.setAttribute('src', newSrc);
-                document.querySelectorAll('.mixi-thumb-item').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.thumb-item').forEach(t => t.classList.remove('active'));
                 thumb.classList.add('active');
             }
         }
