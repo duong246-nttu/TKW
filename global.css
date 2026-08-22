@@ -1,5 +1,5 @@
 /* =====================================================
-   GLOBAL - 6 Thái Tử  (theo phong cách Mixivivu)
+   GLOBAL - 6 Thái Tử 
    Dùng chung cho TẤT CẢ các trang: reset cơ bản, header, footer
    ===================================================== */
 
@@ -509,7 +509,7 @@ header nav a.active {
 
 
 /* =====================================================
-   FOOTER  (nền đậm, giống Mixivivu)
+   FOOTER  
    ===================================================== */
 
 footer {
@@ -1216,4 +1216,4 @@ body.aos-enabled [data-aos].aos-animate {
     .model3d-canvas {
         height: 300px;
     }
-}
+}
